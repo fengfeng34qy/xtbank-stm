@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var _Button=require("./Button"),_Button2=_interopRequireDefault(_Button);function _interopRequireDefault(t){return t&&t.__esModule?t:{default:t}}var install=function(t,e){t.component(_Button2.default.name,_Button2.default)};exports.default={install:install};

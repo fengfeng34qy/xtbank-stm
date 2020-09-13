@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var _Tip=require("./Tip"),_Tip2=_interopRequireDefault(_Tip);function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}var install=function(e,t){e.component(_Tip2.default.name,_Tip2.default)};exports.default={install:install};

@@ -1,0 +1,22 @@
+/*---------此文件不能更改------------*/
+.aui-text {
+  display: inline-block;
+}
+
+.aui-text-box {
+  font-family: inherit;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.aui-text-box-justify{
+  justify-content: space-between;
+}
+
+.aui-text-box-center{
+  justify-content: center;
+}
+
+.aui-text-box-right{
+  justify-content: flex-end;
+}

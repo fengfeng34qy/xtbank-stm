@@ -1,0 +1,222 @@
+/*---------此文件不能更改------------*/
+.tile-menu, .before-animation, .after-animation, .tile-group, .tile-list {
+  transition: var( --tile-menu-transition );
+}
+
+.tile-menu {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  font-size: var( --tile-menu-font-size );
+  background: var( --tile-menu-bg-color );
+  color: var( --tile-menu-font-color );
+  border: var( --tile-menu-border );
+  border-radius: var( --tile-menu-border-radius );
+}
+
+.tile-menu::-webkit-scrollbar {
+  width: 0;
+}
+
+.tile-menu div {
+  box-sizing: border-box;
+}
+
+.tile-menu-wrapper {
+  position: absolute;
+  top: var( --tile-menu-top );
+  left: var( --tile-menu-left );
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-right: var( --tile-menu-right );
+}
+
+.before-animation, .after-animation {
+  width: 0px;
+}
+.tile-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-right: var( --tile-column-margin-right );
+  border: var( --tile-column-border );
+  border-radius: var( --tile-column-border-radius );
+}
+
+.tile-group {
+  margin-bottom: var( --tile-group-margin-bottom );
+  border: var( --tile-group-border );
+  border-radius: var( --tile-group-border-radius );
+  box-shadow: var( --tile-group-box-shadow );
+}
+
+.tile-group-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: var( --tile-header-font-color );
+  border-top: var( --tile-header-border-top );
+  border-right: var( --tile-header-border-right );
+  border-bottom: var( --tile-header-border-bottom );
+  border-left: var( --tile-header-border-left );
+  border-radius: var( --tile-header-border-radius );
+  line-height: var( --tile-header-height );
+  margin-bottom: var( --tile-header-margin-bottom);
+}
+
+.tile-group-header-title {
+  margin-left: var( --tile-header-title-margin-left );
+  font-size: var( --tile-header-font-size );
+}
+
+.tile-group-header-expand {
+  font-size: var( --tile-header-expand-font-size );
+}
+
+.tile-group-header-expand-icon {
+  vertical-align: middle;
+  height: var( --tile-header-expand-icon-height );
+  margin: var( --tile-header-expand-icon-margin );
+}
+
+.tile-list {
+  overflow: hidden;
+  position: relative;
+  font-size: var( --tile-list-font-size );
+  background: var( --tile-list-bg-color );
+  color: var( --tile-list-font-color );
+  border: var( --tile-list-border );
+  border-radius: var( --tile-list-border-radius );
+}
+
+.tile-block {
+  text-align: var( --tile-block-text-align );
+  font-size: var( --tile-block-font-size );
+  color: var( --tile-block-font-color );
+  width: var( --tile-block-width );
+  height: var( --tile-block-height );
+  line-height: var( --tile-block-height );
+  border: var( --tile-block-border );
+  border-radius: var( --tile-block-border-radius );
+}
+
+.tile-block-icon {
+  vertical-align: middle;
+}
+
+.tile-block-title {
+  margin-left: var( --tile-block-title-margin );
+}
+
+.tile-item {
+  position: absolute;  
+  background: var( --tile-item-bg-color );
+  border-bottom: var( --tile-item-border-bottom );
+  border-radius: var( --tile-item-border-radius );
+}
+
+.tile-item-inner-wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  border-right: var( --tile-item-border-right );  
+}
+
+.tile-item-active-wrapper {
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: var( --tile-item-inner-active-border-radius );
+}
+
+.tile-item-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: var( --tile-item-text-align );
+}
+
+.tile-item-icon {
+  margin-bottom: var( --tile-item-icon-margin-bottom );
+}
+
+.tile-item-text {
+  
+}
+
+.tile-item-disable {
+  filter: grayscale(var(--tile-item-disable-bg-grayscale));
+}
+
+.item-with-active:active {
+  filter: grayscale(var(--tile-item-active-bg-grayscale));
+}
+
+.tile-dialog {
+  font-size: var( --tile-dialog-font-size );
+  background: var( --tile-dialog-bg-color );
+  color: var( --tile-dialog-font-color );
+  border: var( --tile-dialog-border );
+  border-radius: var( --tile-dialog-border-radius );
+}
+
+.tile-dialog div {
+  box-sizing: border-box;
+}
+
+.tile-dialog-header {
+  width: 100%;
+  line-height: var( --tile-dialog-header-height );
+  text-align: var( --tile-dialog-header-text-align );
+  font-size: var( --tile-dialog-header-font-size );
+  color: var( --tile-dialog-header-font-color );
+  border-top: var( --tile-dialog-header-border-top );
+  border-right: var( --tile-dialog-header-border-right );
+  border-bottom: var( --tile-dialog-header-border-bottom );
+  border-left: var( --tile-dialog-header-border-left );
+  border-radius: var( --tile-dialog-header-border-radius );
+}
+
+.tile-dialog-list {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: var( --tile-dialog-list-bg-color );
+  border: var( --tile-dialog-list-border );
+  border-radius: var( --tile-dialog-list-border-radius );
+}
+
+.tile-dialog-item-wrapper {
+  position: relative;
+  border-bottom: var( --tile-dialog-item-border-bottom );
+}
+
+.tile-dialog-item {
+  width: var( --tile-dialog-item-width );
+  height: var( --tile-dialog-item-height );
+  margin: var( --tile-dialog-item-magin );
+  font-size: var( --tile-dialog-item-font-size );
+  background: var( --tile-dialog-item-bg-color );
+  color: var( --tile-dialog-item-font-color );
+  border-right: var( --tile-dialog-item-border-right );  
+}
+
+.tile-dialog-item-content {
+  position: absolute;
+  top: var( --tile-dialog-item-content-top );
+  left: var( --tile-dialog-item-content-left );
+  width: var( --tile-dialog-item-content-width );
+  height: var( --tile-dialog-item-content-height );
+}
+
+.tile-dialog-item-content {
+  text-align: var( --tile-dialog-item-content-text-align );
+}
+
+.tile-dialog-item-content-icon {
+  margin: var( --tile-dialog-item-content-icon-magin );
+}

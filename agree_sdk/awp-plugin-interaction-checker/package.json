@@ -1,0 +1,15 @@
+{
+  "name": "awp-plugin-interaction-checker",
+  "version": "4.0.0",
+  "main": "index.js",
+  "files": [
+    "lib/interaction-checker.js",
+    "index.js"
+  ],
+  "modules": [
+    {
+      "name": "InteractionChecker",
+      "description": "交互检查器。主要检查用户是否仍真正操作"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataBasket>
+    <Ade name="CertNo"/>
+    <Ade name="CertType"/>
+    <Ade name="CustName"/>
+    <Ade name="CustNo"/>
+    <Ade name="CustPhoto"/>
+    <Ade name="CustType"/>
+    <Ade name="SignPicBase64"/>
+    <Ade name="CheckResult"/>
+    <Ade name="IDCheckPhoto"/>
+    <Ade name="IDName"/>
+    <Ade name="IDNo"/>
+    <Ade name="IDType"/>
+    <Ade name="Address"/>
+    <Ade name="City"/>
+    <Ade name="PhoneNo"/>
+    <Ade name="Province"/>
+    <Ade name="TelNo"/>
+    <Ade name="AcctName"/>
+    <Ade name="AvlBalance"/>
+    <Ade name="PayeeActName"/>
+    <Ade name="PayeeActNo"/>
+    <Ade name="PayeeBankNo"/>
+    <Ade name="PayeeBankName"/>
+</DataBasket>

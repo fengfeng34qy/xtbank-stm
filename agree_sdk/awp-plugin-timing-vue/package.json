@@ -1,0 +1,18 @@
+{
+  "name": "awp-plugin-timing-vue",
+  "version": "4.0.0",
+  "main": "index.js",
+  "files": [
+    "lib/global-timer.js",
+    "index.js"
+  ],
+  "dependenciesDescription": {
+    "awp-plugin-timing": "^4.0"
+  },
+  "modules": [
+    {
+      "name": "GlobalTimer",
+      "description": "Vue中定义的全局定时器。主要是在Vue中通过定义全局变量this.$globalTimer进行操作定时器。"
+    }
+  ]
+}

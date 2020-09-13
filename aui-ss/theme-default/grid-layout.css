@@ -1,0 +1,50 @@
+/*---------此文件不能更改------------*/
+.aui-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@for $i from 1 to 24 {
+	.aui-col-$i { 
+    box-sizing: border-box;
+   }
+}
+
+/****************单元格对齐方式******************/
+
+.aui-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aui-col-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aui-col-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.aui-col-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+} 
+
+/****************单元格宽度******************/
+
+@for $i from 0 to 24 {
+	.aui-col-$i { 
+    width: calc(1 / 24 * $(i) * 100)% ;
+   }
+}
+
+/****************单元格左偏移距离******************/
+
+@for $i from 1 to 23 {
+	.aui-col-offset-$i { 
+    margin-left: calc(1 / 24 * $(i) * 100)%;
+   }
+}

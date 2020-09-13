@@ -1,0 +1,80 @@
+/*---------此文件不能更改------------*/
+.aui-loading {
+  position: relative;
+  width: 98px;
+  height: 98px;
+  /* border-radius: 100%; */
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aui-loading span {
+  display: inline-block;
+  position: absolute;
+  animation: load 1.04s ease infinite;
+  background: var(--color-primary);
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+
+@keyframes load {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.aui-loading span:nth-child(1) {
+  left: 0;
+  top: 50%;
+  margin-top: -8px;
+  animation-delay: -0.13s;
+}
+
+.aui-loading span:nth-child(2) {
+  left: 12%;
+  top: 12%;
+  animation-delay: -0.26s;
+}
+
+.aui-loading span:nth-child(3) {
+  left: 50%;
+  top: 0;
+  margin-left: -8px;
+  animation-delay: -0.39s;
+}
+
+.aui-loading span:nth-child(4) {
+  top: 12%;
+  right: 10%;
+  animation-delay: -0.52s;
+}
+
+.aui-loading span:nth-child(5) {
+  right: 0;
+  top: 50%;
+  margin-top: -8px;
+  animation-delay: -0.65s;
+}
+
+.aui-loading span:nth-child(6) {
+  right: 12%;
+  bottom: 10%;
+  animation-delay: -0.78s;
+}
+
+.aui-loading span:nth-child(7) {
+  bottom: 0%;
+  left: 42%;
+  animation-delay: -0.91s;
+}
+
+.aui-loading span:nth-child(8) {
+  bottom: 9%;
+  left: 13%;
+  animation-delay: -1.04s;
+}

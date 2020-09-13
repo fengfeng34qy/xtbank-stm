@@ -1,0 +1,45 @@
+/*---------此文件不能更改------------*/
+.aui-tabs_header{
+  white-space: nowrap;
+  position: relative;
+  margin-bottom: var(--tabs-header-margin);
+}
+.aui-tabs_item{
+    width: var(--tabs-item-width);
+    height: var(--tabs-item-height);
+    text-align: center;
+    box-sizing: border-box;
+    line-height: var(--tabs-item-height);
+    display: inline-block;
+    list-style: none;
+    font-size: var(--tabs-item-font_size);
+    color: var(--tabs-item-color);
+    position: relative;
+    background: var(--tabs-item-background);
+    border-top: var(--tabs-item-border_base);
+    border-bottom:var(--tabs-item-border_base);    
+    border-right:none; 
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.aui-tabs_item.active{
+  background-color: var(--tabs-item-active-background-color);
+  border-bottom:none;
+  border-right: var(--tabs-item-border_base);
+  border-left: var(--tabs-item-border_base);  
+  color: var(--tabs-item-active-color);
+  box-sizing: border-box;
+  
+}
+
+.aui-tabs-pane-container--disabled {
+  background-color: #A9A9A9;
+  color: #FFF;
+  cursor: not-allowed
+}
+
+.aui-tabs-pane-container--disabled.active{
+  background-color: rgb(196, 194, 194);
+  color: #FFF;
+  cursor: not-allowed
+}

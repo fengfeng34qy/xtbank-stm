@@ -1,0 +1,1 @@
+{"version":3,"sources":["awp-ui-page-manager-vue/index.js"],"names":["PageManager"],"mappings":";;;;;;;AACA;;;;;;QAGEA,W","file":"index.js","sourcesContent":["\r\nimport PageManager from './lib/page-manager';\r\n\r\nexport {\r\n  PageManager\r\n};\r\n"]}

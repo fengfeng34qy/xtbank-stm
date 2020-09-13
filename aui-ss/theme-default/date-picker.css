@@ -1,0 +1,217 @@
+.aui-date-picker .aui-input,
+.yesBtn {
+  font-family: inherit;
+}
+
+.aui-date-picker .aui-input {
+  display: block;
+  width: 100%;
+  border: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  padding-left: var(--date-input-padding-left);
+  box-sizing: border-box;
+  border-radius: var(--date-border-radius);
+  color: var(--date-panel-color);
+  font-size: var(--date-font-size);
+}
+
+.aui-date-picker ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.aui-date-picker div {
+  box-sizing: border-box;
+}
+
+.aui-input-focus {
+  box-shadow: var(--input-shadow);
+}
+
+
+/*---------此文件不能更改------------*/
+
+.aui-date-picker {
+  width: var(--date-width);
+  height: var(--date-height);
+  position: relative;
+  border-radius: var(--date-border-radius);
+  border: var(--date-border);
+  display: inline-block;
+}
+
+.aui-icon-date {
+  display: block;
+  width: 15px;
+  height: 17px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -7.5px;
+  cursor: pointer;
+}
+
+.aui-date-panel-body {
+  width: var(--date-panel-width);
+  height: var(--date-panel-height);
+  background: var(--date-panel-background);
+  position: fixed;
+  border-radius: 5px;
+  color: var(--date-panel-color);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
+}
+
+.aui-date-panel-header {
+  height: var(--date-panel-header-height);
+  line-height: var(--date-panel-header-height);
+  font-size: var(--date-panel-header-font-size);
+  text-align: center;
+  border-bottom: var(--date-panel-header-border);
+  ;
+}
+
+.date-container {
+  height: 80%;
+  float: left;
+  box-sizing: border-box;
+  margin-bottom: 18px;
+  padding: 0;
+}
+
+.aui-date-panel-year {
+  width: 25%;
+}
+
+.aui-date-panel-month {
+  width: 25%;
+}
+
+.aui-date-panel-day {
+  width: 50%;
+}
+
+.aui-date-picker .year_box {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.aui-date-panel-year ul {
+  height: 100%;
+  width: var(--date-panel-container-year_ul-width);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.aui-date-panel-year ul>li {
+  margin: -1px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  width: 70px;
+  cursor: pointer;
+  margin: 2px auto;
+}
+
+.aui-date-panel-main {
+  height: 80%;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  background: #fff;
+  overflow: hidden;
+}
+
+.aui-date-picker .yesBtn {
+  width: 100px;
+  height: 40px;
+  margin: 0 auto;
+  display: block;
+  background: #e74a41;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 24px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.aui-date-picker .month_box {
+  width: calc(100%/3);
+  height: 25%;
+  line-height: 60px;
+  float: left;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.month_box:nth-child(2n) {
+  background: #f5f5f5;
+}
+
+.aui-date-picker .day_box {
+  overflow: hidden;
+  height: 100%;
+}
+
+.year_box .selected,
+.month_box.selected,
+.message.selected {
+  background-color: #E64941;
+  color: #fff;
+}
+
+.aui-date-picker .preMonth,
+.nextMonth {
+  color: #ccc;
+}
+
+.aui-date-picker .day-list {
+  height: 100%;
+}
+
+.aui-date-picker .day-list li {
+  float: left;
+  width: calc(100%/7);
+  box-sizing: border-box;
+  text-align: center;
+  height: calc(100%/6);
+  line-height: 43px;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+
+
+/*.day-list li:nth-chlid(7n){
+  border-right: none;
+}*/
+
+.aui-date-picker .message {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.aui-date-picker .invalid {
+  display: none;
+}
+
+.aui-date-picker .message span {
+  position: relative;
+  left: 3px;
+  top: 7px;
+}
+
+.aui-date-picker .isDateDisabled {
+  background-color: rgba(197, 197, 197, 0.34);
+  cursor: not-allowed;
+}

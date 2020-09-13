@@ -1,0 +1,270 @@
+[
+  [
+    {
+      "categoryName": "常用业务",
+      "themeColor": "#53B3DB",
+      "layout": [
+        2,
+        2
+      ],
+      "items": [
+        {
+          "icon": "static/resource/ico/转账汇款.png",
+          "tradeName": "行内转账",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/internal-account/InternalAccount.tad",
+          "code": "5001",
+          "children": [
+            [
+              {
+                "categoryName": "3级菜单1",
+                "themeColor": "#53B3DB",
+                "layout": [
+                  3,
+                  2
+                ],
+                "items": [
+                  {
+                    "icon": "static/resource/ico/转账汇款.png",
+                    "tradeName": "行内转账",
+                    "tradeEnName": "remittance",
+                    "size": "normal",
+                    "isEnabled": true,
+                    "navigationMode": "step",
+                    "tadPath": "/selfservice/src/modules/remittance/remittance.tad",
+                    "code": "5001"
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "icon": "static/resource/ico/转账汇款.png",
+          "tradeName": "他行转账",
+          "size": "normal",
+          "isEnabled": false,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/inter-bank-account/InterBankAccount.tad",
+          "code": "5002"
+        },
+        {
+          "icon": "static/resource/ico/借记开卡.png",
+          "tradeName": "测试页面",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/test/Test.tad",
+          "code": "9999"
+        },
+        {
+          "icon": "static/resource/ico/借记开卡.png",
+          "tradeName": "回单打印",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/receipt-print/ReceiptPrint.tad",
+          "code": "1000"
+        },
+        {
+          "tradeName": "理财购买",
+          "icon": "static/resource/ico/借记开卡.png",
+          "size": "normal",
+          "isEnabled": true,
+          "activeClass": "",
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/financial-buy/FinancialBuy.tad",
+          "code": "1001"
+        },
+        {
+          "tradeName": "我的理财",
+          "icon": "static/resource/ico/卡片激活.png",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/my-financial/MyFinancial.tad",
+          "code": "1002"
+        },
+        {
+          "tradeName": "转账汇款",
+          "icon": "static/resource/ico/转账汇款.png",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/remittance/Remittance.tad",
+          "code": "1003"
+        },
+        {
+          "tradeName": "账户查询",
+          "icon": "static/resource/ico/账户查询.png",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/account-enquiry/AccountEnquiry.tad",
+          "code": "1004"
+        },
+        {
+          "tradeName": "收支明细查询",
+          "icon": "static/resource/ico/收支明细查询.png",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/income-expenses-enquiry/IncomeExpensesEnquiry.tad",
+          "code": "1005"
+        },
+        {
+          "tradeName": "个人信息管理",
+          "icon": "static/resource/ico/02.png",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/personal-information-management/PersonalInformationManagement.tad",
+          "code": "1006"
+        },
+        {
+          "tradeName": "个人资料管理",
+          "icon": "static/resource/ico/02.png",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/personal-material-management/PersonalMaterialManagement.tad",
+          "code": "1007"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "categoryName": "借记卡业务",
+      "themeColor": "#53B3DB",
+      "layout": [
+        2,
+        2
+      ],
+      "items": [
+        {
+          "icon": "static/resource/ico/借记开卡.png",
+          "tradeName": "自助开卡",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/create-account/CreateAccount.tad",
+          "code": "1000"
+        },
+        {
+          "tradeName": "卡片激活",
+          "icon": "static/resource/ico/卡片激活.png",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/card-activation/CardActivation.tad",
+          "code": "2001"
+        },
+        {
+          "tradeName": "卡密码重置",
+          "icon": "static/resource/ico/卡密码重置.png",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/reset-pin/ResetPin.tad",
+          "code": "2002"
+        },
+        {
+          "tradeName": "卡密码修改",
+          "icon": "static/resource/ico/卡密码修改.png",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/change-pin/ChangePin.tad",
+          "code": "2003"
+        },
+        {
+          "tradeName": "挂失补发",
+          "icon": "static/resource/ico/卡片更换.png",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/reissue-card/ReissueCard.tad",
+          "code": "2004"
+        },
+        {
+          "tradeName": "我要换卡",
+          "icon": "static/resource/ico/卡片更换.png",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/replace-card/ReplaceCard.tad",
+          "code": "2005"
+        },
+        {
+          "tradeName": "银行卡设置",
+          "icon": "static/resource/ico/卡片更换.png",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/card-set/CardSet.tad",
+          "code": "2006"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "categoryName": "现金业务",
+      "themeColor": "#53B3DB",
+      "layout": [
+        2,
+        2
+      ],
+      "items": [
+        {
+          "tradeName": "加钞",
+          "icon": "static/resource/ico/卡片更换.png",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/cash-replenish/CashReplenish.tad",
+          "code": "2007"
+        },
+        {
+          "tradeName": "清钞",
+          "icon": "static/resource/ico/卡片更换.png",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/cash-clear/CashClear.tad",
+          "code": "2008"
+        },
+        {
+          "tradeName": "现金存款",
+          "icon": "static/resource/ico/卡片更换.png",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/cash-in/CashIn.tad",
+          "code": "2006"
+        },
+        {
+          "tradeName": "现金管理",
+          "icon": "static/resource/ico/卡片更换.png",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/cash-manager/CashManager.tad",
+          "code": "2008"
+        },
+        {
+          "tradeName": "纸币存款",
+          "icon": "static/resource/ico/卡片更换.png",
+          "size": "normal",
+          "isEnabled": true,
+          "navigationMode": "step",
+          "tadPath": "/selfservice/src/modules/note-cash-in/NoteCashIn.tad",
+          "code": "2008"
+        }
+      ]
+    }
+  ]
+]

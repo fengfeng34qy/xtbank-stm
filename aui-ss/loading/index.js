@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var _Loading=require("./Loading"),_Loading2=_interopRequireDefault(_Loading);function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}var install=function(e,t){e.component(_Loading2.default.name,_Loading2.default)};exports.default={install:install};

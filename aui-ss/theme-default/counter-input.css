@@ -1,0 +1,107 @@
+/*---------此文件不能更改------------*/
+.aui-counter-input {
+  position: relative;
+  display: inline-block;
+  width: var(--input--width--primary);
+  cursor: not-allowed;
+  border-radius: var(--border-radius);
+}
+
+
+
+.aui-counter-input i {
+  font-style: normal;
+}
+
+.aui-input-number__decrease i {
+  display: inline-block;
+  padding-top: 12px;
+  height: 16px;
+}
+
+.aui-input-number__increase i {
+  display: block;
+  line-height: 33px;
+}
+
+.aui-input-number__decrease,.aui-input-number__increase {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: calc(var(--input--height--primary) - 2px);
+  height: calc(var(--input--height--primary) - 2px);
+  text-align: center;
+  color: #606266;
+  cursor: pointer;
+  font-size: 24px;
+  user-select: none;
+}
+
+.aui-input-number__decrease.is-disabled,.aui-input-number__increase.is-disabled {
+  cursor: not-allowed;
+  color: #c0c4cc;
+}
+
+.aui-input-number__decrease.min-disabled,.aui-input-number__increase.max-disabled {
+  color: #c0c4cc;
+}
+
+.aui-input-number__decrease {
+  left: 0;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  border: var(--input-border);
+
+}
+
+.aui-input-number__increase {
+  right: 0;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  border: var(--input-border);
+}
+
+.aui-counter-input__inner {
+  text-align: center;
+  background-color: #fff;
+  background-image: none;
+  border: var(--input-border);
+  border-right: none;
+  border-left: none;
+  box-sizing: border-box;
+  color: var(--color-font);
+  display: inline-block;
+  font-size: var(--input--font--size);
+  height: var(--input--height--primary);
+  line-height: 1;
+  outline: none;
+  margin-left: 40px;
+  transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+  width: calc(100% - 80px);
+}
+
+.aui-counter-input.is-disabled {
+  cursor: not-allowed;
+  background-color: rgb(235, 235, 228);
+  color: #c0c4cc;
+}
+
+.aui-counter-input.is-disabled .aui-counter-input__inner {
+  cursor: not-allowed;
+  background-color: rgb(235, 235, 228);
+  color: #c0c4cc;
+}
+
+.aui-counter-input.is-focus {
+  box-shadow:var(--input-shadow);
+}
+
+.aui-counter-input.aui-counter-input-small {
+  width: var(--input--width--samll);
+}
+
+.aui-counter-input.aui-counter-input-normal {
+  width: var(--input--width--normal);
+}
+
+.aui-counter-input.aui-counter-input-large {
+  width: var(--input--width--large);
+}

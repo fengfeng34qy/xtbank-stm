@@ -1,0 +1,80 @@
+/*---------此文件不能更改------------*/
+
+.aui-text-input {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  border: var(--text-input-border);
+  border-radius: var(--text-input-border-radius);
+  height: calc(var(--text-input--height) - 2px);
+  font-size: var(--input--font--size);
+}
+
+.aui-text-input input {
+  font-family: inherit;
+  outline: none;
+  color: var(--color-font);
+  border: none;
+  width: 0;
+  height: calc(100% - 2px);
+  flex: auto;
+  padding-left: var(--text-input--padding);
+  padding-right: var(--text-input--padding);
+  border-radius: var(--border-radius);
+  font-size: inherit;
+  background-color: transparent;
+}
+
+.aui-text-input-focus{
+  border: var(--text-input-focus-border);
+  box-shadow: var(--text-input-focus-shadow);
+}
+
+.aui-text-input ::-webkit-input-placeholder {
+  color: var(--border-color-base);
+  text-align: left;
+}
+
+.aui-text-input input::-webkit-outer-spin-button,
+.aui-text-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.aui-text-input input:disabled {
+  background: var(--text-input-disabled-bg);
+  cursor: not-allowed;
+}
+
+.aui-text-input-disabled{
+  background: var(--text-input-disabled-bg);
+  cursor:not-allowed;
+}
+
+.aui-text-input-disabled input {
+  color: var(--text-input-disabled-color);
+}
+
+.aui-text-input-left {
+  text-align: left;
+}
+
+.aui-text-input-center {
+  text-align: center;
+}
+
+.aui-text-input-right {
+  text-align: right;
+}
+
+.aui-text-input-small {
+  width: calc(var(--text-input--width--samll) - 2px);
+}
+
+.aui-text-input-normal {
+  width: calc(var(--text-input--width--normal) - 2px);
+}
+
+.aui-text-input-large {
+  width: calc(var(--text-input--width--large) - 2px);
+}

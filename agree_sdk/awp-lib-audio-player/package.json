@@ -1,0 +1,15 @@
+{
+  "name": "awp-lib-audio-player",
+  "version": "4.0.0",
+  "main": "index.js",
+  "files": [
+    "lib/audio.js",
+    "index.js"
+  ],
+  "modules": [
+    {
+      "name": "AudioPlayer",
+      "description": "音频播放器"
+    }
+  ]
+}

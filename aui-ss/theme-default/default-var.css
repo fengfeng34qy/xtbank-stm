@@ -1,0 +1,514 @@
+﻿/*---------此文件不能更改------------*/
+:root {
+  /*-------color-------*/
+  --color-primary: #E74A41;
+  --color-success: #13ce66;
+  --color-warning: #f7ba2a;
+  --color-danger: #ff4949;
+  --color-info: #50bfff;
+  --color-font: #000000;
+  --border-primary: #bfcbd9;
+  --disabled--font--color: #DCDCDC;
+
+  --color-secondary: color(var(--color-primary) s(99%) l(*0.9));
+  --color-white: #fff;
+  --color-dark-white: color(var(--color-white) blend(var(--color-primary) 2%));
+  --color-black: #000;
+
+  --color-text:#9c9c9c;
+  --mask-opacity:0.8;
+  --color-border-primary:#C4C4C4;
+
+  --color-base-black: color(var(--color-primary) h(+6) s(33%) l(18%));
+  --color-light-black: color(var(--color-base-black) h(+5) s(27%) l(27%));
+  --color-extra-light-black: color(var(--color-base-black) h(+2) s(19%) l(35%));
+
+  --color-base-silver: color(var(--color-base-black) h(+3) s(16%) l(58%));
+  --color-light-silver: color(var(--color-base-black) h(+3) s(23%) l(67%));
+  --color-extra-light-silver: color(var(--color-base-black) s(26%) l(80%));
+
+  --color-base-gray: color(var(--color-base-black) s(28%) l(86%));
+  --color-light-gray: color(var(--color-base-black) h(+10) s(33%) l(92%));
+  --color-extra-light-gray: color(var(--color-base-black) h(+6) s(33%) l(95%));
+
+  /*-------size-------*/
+  --width--primary: 146px;
+  --height--primary: 18px;
+  --radius--primary: 2px;
+  --icon-radius: 8px;
+  --padding--primary-width:10px;
+  --padding--primary-height:6px;
+  --icon-width: 14px;
+  --icon-height: 14px;
+  --check-icon-width: 6px;
+  --check-icon-height: 6px;
+  --check-icon-border-width: 5px;
+  --check-icon-border-radius: 10px;
+  --icon-slide: 18px;
+  --icon-top: 3px;
+  --shade-percent:10%;
+
+
+  --border-radius-default:8px;
+  --border-radius-rounded-corner:var(--height-primary/2);
+  --border-radius-square-corner:0px;
+  --width-primary:200px;
+  --height-primary:60px;
+  --font-size-primary:30px;
+  --padding-vertical-primary:9px;
+  
+  --font-size-small:24px;
+  --width-small:80px;
+  --height-small:50px;
+  --padding-vertical-small:8px;
+
+  --font-size-large:36px;
+  --padding-vertical-large:10px;
+  --width-large:220px;
+  --height-large:70px;
+  
+  --font-size-huge:18px;
+  --width-huge:275px;
+  --height-huge:60px;
+  --padding-vertical-huge:18px;
+
+  --font-size-bottom:26px;
+  --width-bottom:168px;
+  --height-bottom:60px;
+  --padding-vertical-bottom:16px;
+
+  /*-------border-------*/
+  --border-width-base: 1px;
+  --border-style-base: solid;
+  --border-color-base: var(--border-primary);
+  --border-base: var(--border-width-base) var(--border-style-base) var(--border-color-base);
+  --border-radius: var(--radius--primary);
+
+  /*-------number-input-------*/
+  --input-border: 1px solid #dcd2c0;
+  --number-input-border: var(--input-border);
+  --number-input-border-radius: 0;
+  --number-input-focus-border: var(--input-border);
+  --number-input-focus-shadow: var(--input-shadow);
+  --number-input--width: var(--input--width--primary);
+  --number-input--height: var(--input--height--primary);
+  --number-input--padding: 6px;
+  --number-input--width--samll: var(--input--width--samll);
+  --number-input--width--normal: var(--input--width--normal);
+  --number-input--width--large: var(--input--width--large);
+  --number-input-disabled-color: var(--color-font);
+  --number-input-disabled-bg: rgb(235,235,228);
+  /**2018新UI样式代码**/
+  /* --number-input-border: 1px solid #CCCCCC;
+  --number-input-border-radius: 4px;
+  --number-input-focus-border: 1px solid #999999;
+  --number-input-focus-shadow: 0 0 2px 0 #999999;
+  --number-input--width: 700px;
+  --number-input--height: 60px;
+  --number-input--padding: 20px;
+  --number-input--width--samll: 700px;
+  --number-input--width--normal: 700px;
+  --number-input--width--large: 700px;
+  --number-input-disabled-color: #666; 
+  --number-input-disabled-bg:#F5F5F5;  */
+
+  /*-------text-input-------*/
+  --text-input-border: var(--input-border);
+  --text-input-border-radius: 0;
+  --text-input-focus-border: var(--input-border);
+  --text-input-focus-shadow: var(--input-shadow);
+  --text-input--width: var(--input--width--primary);
+  --text-input--height: var(--input--height--primary);
+  --text-input--padding: 6px;
+  --text-input--width--samll: var(--input--width--samll);
+  --text-input--width--normal: var(--input--width--normal);
+  --text-input--width--large: var(--input--width--large);
+  --text-input-disabled-color: var(--color-font);
+  --text-input-disabled-bg: rgb(235,235,228);
+  /**2018新UI样式代码**/
+  /* --text-input-border: 1px solid #CCCCCC;
+  --text-input-border-radius: 4px;
+  --text-input-focus-border: 1px solid #999999;
+  --text-input-focus-shadow: 0 0 2px 0 #999999;
+  --text-input--width: 700px;
+  --text-input--height: 60px;
+  --text-input--padding: 20px;
+  --text-input--width--samll: 700px;
+  --text-input--width--normal: 700px;
+  --text-input--width--large: 700px;
+  --text-input-disabled-color: #666; 
+  --text-input-disabled-bg:#F5F5F5;  */
+
+  /*-----------currency-input-------------*/
+  --currency-input-border: var(--input-border);
+  --currency-input-border-radius: 0;
+  --currency-input-focus-border: var(--input-border);
+  --currency-input-focus-shadow: var(--input-shadow);
+  --currency-input--height: var(--input--height--primary);
+  --currency-input--padding: 6px;
+  --currency-input-disabled-color: var(--color-font);
+  --currency-input--width--samll: var(--input--width--samll);
+  --currency-input--width--normal: var(--input--width--normal);
+  --currency-input--width--large: var(--input--width--large);
+  --currency-input-disabled-bg: rgb(235,235,228);
+
+  /*-------input-------*/
+  --input-shadow:0 0 4px 0 #e74a41;
+
+
+    /*-----shade-----*/
+  --placeholder-shade-percent: 10%;
+    /*-----size------*/
+  --input--width--primary: var(--width--primary);
+  --input--width--samll: 120px;
+  --input--width--large: 200px;
+  --input--width--normal: 160px;
+  --input--font--size: 20px;
+  --input--height--primary: 40px;
+  --input-background--color: #f2f2f2;
+
+  /*----------button---------------*/
+  --button-border-primary:var(--color-border-primary);
+  --button-mask-opacity:var(--mask-opacity);
+  --button-primary:var(--color-primary);
+  --button-fill-primary:var(--color-primary);
+  --button-white:var(--color-white);
+  --button-text-primary:var(--color-text);
+  --button-padding-left-right-small:12px;
+  --button-padding-left-right-primary:15px;
+  --button-padding-left-right-large:18px;
+  --button-padding-left-right-huge:20px;
+  --button-padding-left-right-bottom:20px;
+  --button-success:var(--color-success);
+  --button-warning:var(--color-warning);
+  --button-info:var(--color-info);
+  --button-home:var(--color-home);
+  --button-preStep:var(--color-preStep);
+  --button-query:var(--color-query);
+  --button-active-shade-percent: var(--shade-percent);
+
+
+  /*---disabled button---*/
+  --disabled-primary:#ccc;
+  --button-disabled-color: var(--disabled-primary);
+  --button-disabled-fill: #EEF1F6;
+  --button-disabled-border: var(--disabled-primary);
+  /*--color-base-black: color(var(--disabled-primary) h(+6) s(33%) l(18%));
+  --color-base-gray: color(var(--color-base-black) s(28%) l(86%));
+  --color-extra-light-silver: color(var(--color-base-black) s(26%) l(80%));
+  --color-extra-light-gray: color(var(--color-base-black) h(+6) s(33%) l(95%));
+  --disabled-border-base: var(--color-base-gray);*/
+/*
+  --button-disabled-color: var(--color-extra-light-silver);
+  --button-disabled-fill: var(--color-extra-light-gray);
+  --button-disabled-border: var(--disabled-border-base);*/
+  
+    /*-------radio-------*/
+  --radio-border-inner-border: 2px solid #e74a41;
+  --radio-isradio-icon: url(./images/radio/isRadio.png);
+  --radio-disradio-icon: url(./images/radio/disRadio.png);
+
+  /*-------Checkbox-------*/
+  --checkbox-label-font-size: 20px;
+  --checkbox-icon-color: #896e6e;
+  --checkbox-border-color: var(--border-primary);
+  --checkbox-disabled-border-color:#d1dbe5;
+  --checkbox-display-inline-block: inline-block;
+  --checkbox-inner-border-base: var(--border-base);
+  --chekbox-inner-box-shadow:#bfcbd9;
+  --checkbox-position-relative: relative; 
+  --checkbox-position-absolute: absolute;
+  --checkbox-ischecked-icon: url(./images/checkbox/isChecked.png);
+  --checkbox-dischecked-icon: url(./images/checkbox/disChecked.png);
+
+
+  /* --------------------------Steps--------------------------*/
+  /******统一执行******/
+  --step-circle-size: 36px;                         /**圆直径尺寸**/
+  --step-circle-border-color: #ededed;              /**圆描边颜色（根据UI效果，不需要设置成transparent）**/
+  --step-number-size: 20px;                         /**序号大小***/
+  --step-title-size: 24px;                          /**标题大小**/
+  --step-title-padding: 22px;                       /**标题离圆的偏移距离**/
+  --step-line-margin: 0px;                          /**过程线条离左右圆的间距**/
+  --step-line-overflow: visible;                    /**过程线条溢出隐藏,默认值visible不隐藏（如果设置了--step-line-margin间距大于0px时，需将此值设置成hidden）**/
+  --step-line-top-size: 2px;                        /**过程顶部线条尺寸**/
+  --step-line-top-color: var(--color-primary);      /**过程顶部线条颜色**/
+  --step-line-bottom-size: 4px;                     /**过程底部线条尺寸**/
+  --step-line-bottom-color: #e0e0e0;               /**过程底部线条颜色**/
+  --step-line-offset-size: 18px;                      /**过程线条偏移尺寸默认为圆半径**/
+  /******已执行executed******/
+  --step-executed-circle-background: var(--color-primary);       /**圆背景颜色或图片（如果设置图片请将序号颜色设置成transparent）**/
+  --step-executed-circle-border: 0px solid var(--color-primary); /**圆边框颜色尺寸**/
+  --step-executed-number-color: #fff;                            /**序号颜色***/
+  --step-executed-title-color: var(--color-primary);             /**标题颜色**/
+  --step-executed-title-weight: 600;                             /**标题加粗**/
+  /******正在执行executing******/
+  --step-executing-circle-background: var(--color-primary);      /**圆背景颜色或图片（如果设置图片请将序号颜色设置成transparent）**/
+  --step-executing-circle-border: 0px solid var(--color-primary);/**圆边框颜色尺寸**/
+  --step-executing-number-color: #fff;                           /**序号颜色***/
+  --step-executing-title-color: var(--color-primary);            /**标题颜色**/
+  --step-executing-title-weight: 600;                            /**标题加粗**/
+  /******未执行unexecuted******/
+  --step-unexecuted-circle-background: #ededed;     /**圆背景颜色或图片（如果设置图片请将序号颜色设置成transparent）**/
+  --step-unexecuted-circle-border: 0px solid #ededed;/**圆边框颜色尺寸**/
+  --step-unexecuted-number-color: #896e6e;          /**序号颜色***/
+  --step-unexecuted-title-color: #896e6e;           /**标题颜色**/
+  --step-unexecuted-title-weight: 0;                /**标题加粗**/
+  /******当方向为水平时设置（horizontal）******/
+  --step-horizontal-align: center;                  /**水平方向对齐方式，默认center居中对齐，可以设置flex-start左对齐**/
+  --step-horizontal-padding: 30px;                  /**标题缩进距离，默认0px不缩进，当设置flex-start左对齐时需要根据文字长度设置缩进距离**/
+
+  /* -------------------DialogBox--------------------------------------- */
+  --dialogBox-mask-opacity: 0.5;
+
+  /* -------------------password--------------------------------------- */
+  --password-span-font-size: 48px;
+  --password-span-font-color: #896e6e;
+  /*--paasword-span-margin-top: 16px;*/
+  --password-div-width: 80px;
+  --password-div-height: 80px;
+
+   /*-------Select-------*/
+  --select-width: 160px;
+  --select-width-large: 200px;
+  --select-width-small: 120px;
+  --select-height: 40px;
+  --select-color:#896e6e;
+  --select-input-padding-left: 10px;
+  --select-border-base:1px solid #dcd2c0;
+  --selected-input-background:#f2f2f2;
+  --select-input-hover-color: #8391a5;
+  --select-icon-width: 35px;
+  --select-border-radius:2px;
+  --select-font-size: 18px;  
+  /*--option-margin-top:35px;*/
+  --option-item-hover-background:#e4e8f1;
+  --option-item-selected-background:#e0e0e0;
+  --option-item-selected-hover-background:var(--option-item-selected-background);
+  --select-focus-border: var(--input-border);
+  --select-focus-shadow: var(--input-shadow);
+  --select-disabled-color: var(--color-font);
+  --select-disabled-bg: rgb(235,235,228);
+  --select-icon-top: 10px;
+  --select-icon-right: 10px;
+  --option-item-height: 40px;
+  --option-item-border-bottom: none;
+  --option-scrollbar-width: normal;
+  --option-scrollbar-height: normal;
+  --option-scrollbar-radius: normal;
+  --option-scrollbar-thumb-bg: normal;
+  --option-scrollbar-track-bg: normal;
+  --option-margin-left: 0;
+  --option-radius: 0px;
+  --option-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
+  --option-border: none;
+  --option-top: 0;
+  --option-left: 0;
+  --option-border-top: none;
+  --option-top-line: none;
+  /**2018新UI样式代码**/
+  /* --select-width: 572px;
+  --select-width-large: 572px;
+  --select-width-small: 572px;
+  --select-height: 58px;
+  --select-border-radius: 4px;
+  --select-icon-top: 20px;
+  --select-icon-right: 24px;
+  --option-item-border-bottom: 1px solid #E0E0E0;
+  --option-scrollbar-width: 8px;
+  --option-scrollbar-height: 8px;
+  --option-scrollbar-radius: 8px;
+  --option-scrollbar-thumb-bg: #EBEBEB;
+  --option-scrollbar-track-bg: #F6F6F6;
+  --option-margin-left: 120px;
+  --option-radius: 0 0 4px 4px;
+  --option-box-shadow: none;
+  --option-border: 1px solid #CCC;
+  --option-top: 21px;
+  --option-left: -1px;
+  --option-top-line: 1px solid #CCC;
+  --option-item-selected-background: #F27948;
+  --select-focus-border: 1px solid #999999;
+  --select-focus-shadow: 0 0 2px 0 #999999;
+  --select-color:#333;
+  --select-font-size: 20px;
+  --select-disabled-bg: #F5F5F5; */
+
+   /*-------Tab-------*/
+   --tabs-header-margin: 20px;
+   --tabs-item-width: 240px;
+   --tabs-item-height: 50px;
+   --tabs-item-font_size: 14px;
+   --tabs-item-color: #999;
+   --tabs-item-background: #f5f5f5;
+   --tabs-item-border_base: 1px solid #dcd2c0;
+   --tabs-item-active-color: #896e6e;
+   --tabs-item-active-background-color:#fff;
+
+   /*-------text-area-------*/
+   --background-text-area: #f2f2f2;
+   --border-text-area: 1px solid #dcd2c0;
+   --border-radius-text-area: 2px;
+   --width-text-area: 453px;
+   --height-text-area: 78px;
+   --padding-text-area: 10px;
+   --color-text-area: #896e6e;
+   --fontsize-text-area: 18px;
+   --text-area-focus-border: var(--input-border);
+   --text-area-focus-shadow: var(--input-shadow);
+   --textarea-disabled-bg: rgb(235,235,228);
+
+   --width-label-text-area: 700px;
+   --height-label-text-area: 90px;
+   --width-label-text-area-label: 100px;
+   --height-label-text-area-label: 50px;
+   --width-label-text-area-input: 505px;
+   --border-label-text-area: 1px solid #CCCCCC;
+   --color-label-text-area: #999;
+   --border-radius-label-text-area: 4px;
+   /**2018新UI样式代码**/
+   /* --text-area-focus-border: 1px solid #999999;
+   --text-area-focus-shadow: 0 0 2px 0 #999999;
+   --border-text-area: 1px solid #ccc;
+   --textarea-disabled-bg: #F5F5F5; */
+
+   /*-------date-picker--------*/
+   --date-width: 160px;
+   --date-height: 40px;
+   --date-border-radius: 2px;
+   --date-border: 1px solid #dcd2c0; 
+   --date-panel-width: 600px;
+   --date-panel-height: 400px;
+   --date-panel-background: #f5f5f5; 
+   --date-panel-border-radius: 5px;
+   --date-panel-color:#896e6e;
+   --date-panel-header-height:60px;
+   --date-panel-header-font-size:24px;
+   --date-panel-header-border:1px solid #e0e0e0;
+   --date-panel-container-year_ul-width:170px;
+   --date-input-padding-left: 10px;
+   --date-font-size: 18px;
+
+   /*-------admin-input-------*/
+
+   --admin-input-size: 28px;
+   --admin-input-color: #896e6e;
+   --admin-input-background-color: #ffffff;
+   --admin-input-background-text: url(./images/admin-input/admin-text.png) no-repeat 18px 20px;
+   --admin-input-background-password: url(./images/admin-input/admin-password.png) no-repeat 18px 20px;
+   --admin-input-border: 1px solid #c8c7cf;
+   --admin-input-border-radius: 6px;
+   --admin-input-width: 393px;
+   --admin-input-height: 66px;
+   --admin-input-padding: 69px;
+   --admin-placeholder-color: #ccc;
+   --admin-focus-border: 1px solid #b09595;
+   --admin-focus-box-shadow: 0 0 3px 0 #896e6e;
+  
+  /*-------tips-------*/
+
+  --tip-background: url(./images/tip/tip.png) no-repeat 0 0;
+  --tip-padding: 20px;
+  --tip-size: 20px;
+  --tip-size--large: 24px;
+  --tip-color: #ff6633;;
+
+  /* -------table--------- */
+
+  /* -------tile-menu--------- */
+  --tile-menu-transition: all 0.6s;                           /*-------平铺式菜单组件动画过度效果-------*/
+  --tile-menu-top: 20px;                           /*-------平铺式菜单组件距上侧距离-------*/
+  --tile-menu-left: 64px;                           /*-------平铺式菜单组件距左侧距离-------*/
+  --tile-menu-right: 0px;                           /*-------平铺式菜单组件距右侧距离-------*/
+  --tile-menu-font-color: #333;                           /*-------平铺式菜单组件字体颜色-------*/
+  --tile-menu-bg-color: transparent;                             /*-------平铺式菜单组件背景色-------*/
+  --tile-menu-font-size: 20px;                            /*-------平铺式菜单组件字体大小-------*/
+  --tile-menu-border: none;                          /*-------平铺式菜单组件边框-------*/
+  --tile-menu-border-radius: 0;                          /*-------平铺式菜单组件圆角大小-------*/
+  --tile-column-margin-right: 24px;                          /*-------平铺式菜单组件菜单列右边距-------*/ 
+  --tile-column-border: none;                          /*-------平铺式菜单组件菜单列边框-------*/
+  --tile-column-border-radius: 0;                          /*-------平铺式菜单组件菜单列圆角大小-------*/ 
+  --tile-group-margin-bottom: 24px;                          /*-------平铺式菜单组件菜单组下边距-------*/
+  --tile-group-border: none;                          /*-------平铺式菜单组件菜单组边框-------*/
+  --tile-group-border-radius: 0;                          /*-------平铺式菜单组件菜单组圆角大小-------*/ 
+  --tile-group-box-shadow: none;                          /*-------平铺式菜单组件菜单组阴影效果-------*/
+  --tile-header-font-color: #fff;                          /*-------平铺式菜单组件菜单组header字体颜色-------*/
+  --tile-header-font-size: 24px;                             /*-------平铺式菜单组件菜单组header字体大小-------*/
+  --tile-header-border-top: none;                          /*-------平铺式菜单组件菜单组header上边框-------*/
+  --tile-header-border-right: none;                          /*-------平铺式菜单组件菜单组header右边框-------*/
+  --tile-header-border-bottom: none;                          /*-------平铺式菜单组件菜单组header下边框-------*/
+  --tile-header-border-left: none;                          /*-------平铺式菜单组件菜单组header左边框-------*/
+  --tile-header-border-radius: 6px;                             /*-------平铺式菜单组件菜单组header圆角大小-------*/
+  --tile-header-height: 50px;                             /*-------平铺式菜单组件菜单组header高度-------*/
+  --tile-header-margin-bottom: 8px;                             /*-------平铺式菜单组件菜单组header下侧外边距-------*/
+  --tile-header-title-margin-left: 30px;                          /*-------平铺式菜单组件菜单组header中标题左边距-------*/
+  --tile-header-expand-font-size: 16px;                          /*-------平铺式菜单组件菜单组header中更多/收起标签字体大小-------*/
+  --tile-header-expand-icon-height: 18px;                          /*-------平铺式菜单组件菜单组header中更多/收起图标高度-------*/
+  --tile-header-expand-icon-margin: 0 30px 0 8px;                          /*-------平铺式菜单组件菜单组header中更多/收起图标边距-------*/
+  --tile-list-font-color: #333;                           /*-------平铺式菜单组件菜单项列表字体颜色-------*/
+  --tile-list-bg-color: transparent;                             /*-------平铺式菜单组件菜单项列表背景色-------*/
+  --tile-list-font-size: 20px;                            /*-------平铺式菜单组件菜单项列表字体大小-------*/
+  --tile-list-border: none;                          /*-------平铺式菜单组件菜单项列表边框-------*/
+  --tile-list-border-radius: 6px;                             /*-------平铺式菜单组件菜单项列表圆角大小-------*/
+  --tile-block-font-size: 28px;                              /*-------平铺式菜单组件单项菜单组字体大小-------*/
+  --tile-block-font-color: #fff;                              /*-------平铺式菜单组件单项菜单组字体颜色-------*/
+  --tile-block-width: 100%;                              /*-------平铺式菜单组件单项菜单组宽度-------*/
+  --tile-block-height: 160px;                              /*-------平铺式菜单组件单项菜单组高度-------*/
+  --tile-block-border: none;                          /*-------平铺式菜单组件单项菜单组边框-------*/
+  --tile-block-border-radius: 6px;                              /*-------平铺式菜单组件单项菜单组圆角大小-------*/
+  --tile-block-text-align: center;                              /*-------平铺式菜单组件单项菜单组中文字对齐方式-------*/
+  --tile-block-title-margin: 24px;                              /*-------平铺式菜单组件单项菜单组标题与图标间距离-------*/
+  --tile-item-bg-color: #fff;                             /*-------平铺式菜单组件菜单项背景色-------*/
+  --tile-item-font-size: 20px;                            /*-------平铺式菜单组件菜单项字体大小-------*/
+  --tile-item-font-color: #333;                           /*-------平铺式菜单组件菜单项字体颜色-------*/
+  --tile-item-border-right: none;                             /*-------平铺式菜单组件菜单项右边框-------*/ 
+  --tile-item-border-bottom: none;                             /*-------平铺式菜单组件菜单项下边框-------*/ 
+  --tile-item-border-radius: 6px;                             /*-------平铺式菜单组件菜单项圆角大小-------*/ 
+  --tile-item-inner-active-border-radius: 6px;                             /*-------平铺式菜单组件菜单项之间无间距时按下效果的圆角大小-------*/
+  --tile-item-text-align: center;                              /*-------平铺式菜单组件菜单项中文字对齐方式-------*/
+  --tile-item-icon-margin-bottom: 10px;                              /*-------平铺式菜单组件菜单项中图标下边距-------*/
+  --tile-item-disable-bg-grayscale: 1;                              /*-------平铺式菜单组件菜单项禁用时背景灰度级-------*/
+  --tile-item-active-bg-grayscale: 0.3;                              /*-------平铺式菜单组件菜单项按下时背景灰度级-------*/
+  --tile-dialog-font-color: #333;                           /*-------平铺式菜单组件对话框字体颜色-------*/
+  --tile-dialog-bg-color: transparent;                             /*-------平铺式菜单组件对话框背景色-------*/
+  --tile-dialog-font-size: 20px;                            /*-------平铺式菜单组件对话框字体大小-------*/
+  --tile-dialog-border: none;                            /*-------平铺式菜单组件对话框边框-------*/
+  --tile-dialog-border-radius: 0;                            /*-------平铺式菜单组件对话框圆角大小-------*/
+  --tile-dialog-header-font-color: #fff;                          /*-------平铺式菜单组件对话框header字体颜色-------*/
+  --tile-dialog-header-font-size: 24px;                             /*-------平铺式菜单组件对话框header字体大小-------*/
+  --tile-dialog-header-border-top: none;                          /*-------平铺式菜单组件对话框header上边框-------*/
+  --tile-dialog-header-border-right: none;                          /*-------平铺式菜单组件对话框header右边框-------*/
+  --tile-dialog-header-border-bottom: 1px dashed rgba(0, 0, 0, .4);                          /*-------平铺式菜单组件对话框header下边框-------*/
+  --tile-dialog-header-border-left: none;                          /*-------平铺式菜单组件对话框header左边框-------*/
+  --tile-dialog-header-border-radius: 0;                             /*-------平铺式菜单组件对话框header圆角大小-------*/
+  --tile-dialog-header-height: 89px;                             /*-------平铺式菜单组件对话框header高度-------*/
+  --tile-dialog-header-text-align: center;                              /*-------平铺式菜单组件对话框header中文字对齐方式-------*/
+  --tile-dialog-list-bg-color: #fff;                              /*-------平铺式菜单组件对话框菜单项列表背景色-------*/
+  --tile-dialog-list-border: none;                          /*-------平铺式菜单组件对话框菜单项列表边框-------*/
+  --tile-dialog-list-border-radius: 0;                             /*-------平铺式菜单组件对话框菜单项列表圆角大小-------*/
+  --tile-dialog-item-width: 184px;                              /*-------平铺式菜单组件对话框菜单项宽度-------*/
+  --tile-dialog-item-height: 119px;                              /*-------平铺式菜单组件对话框菜单项高度-------*/
+  --tile-dialog-item-magin: 25px 0;                              /*-------平铺式菜单组件对话框菜单项外边距-------*/
+  --tile-dialog-item-bg-color: #fff;                             /*-------平铺式菜单组件对话框菜单项背景色-------*/
+  --tile-dialog-item-font-size: 20px;                            /*-------平铺式菜单组件对话框菜单项字体大小-------*/
+  --tile-dialog-item-font-color: #333;                           /*-------平铺式菜单组件对话框菜单项字体颜色-------*/
+  --tile-dialog-item-border-bottom: 1px solid #D8DDE5;                          /*-------平铺式菜单组件对话框菜单项下边框-------*/
+  --tile-dialog-item-border-right: 1px solid #D8DDE5;                          /*-------平铺式菜单组件对话框菜单项右边框-------*/
+  --tile-dialog-item-content-width: 164px;                              /*-------平铺式菜单组件对话框菜单项内容块宽度-------*/
+  --tile-dialog-item-content-height: 150px;                              /*-------平铺式菜单组件对话框菜单项内容块高度-------*/
+  --tile-dialog-item-content-top: 10px;                              /*-------平铺式菜单组件对话框菜单项内容块距外层上边距-------*/
+  --tile-dialog-item-content-left: 10px;                              /*-------平铺式菜单组件对话框菜单项内容块距外层左边距-------*/
+  --tile-dialog-item-content-text-align: center;                              /*-------平铺式菜单组件对话框菜单项中文字对齐方式-------*/
+  --tile-dialog-item-content-icon-magin: 20px 0;                              /*-------平铺式菜单组件对话框菜单项图标外边距-------*/
+
+ /* -------progress--------- */
+  --bg-color:#e4e8f1;
+  --progress-text-color: #48576a;
+  --progress-primary-color: #20a0ff;
+  --progress-success-color: var(--color-success);
+  --progress-warning-color: var(--color-warning);
+  --progress-info-color: var(--color-info);
+  --progress-danger-color: var(--color-danger);
+  --progress-white-color: var(--color-white);
+}
+ 

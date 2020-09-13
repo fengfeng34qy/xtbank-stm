@@ -1,0 +1,68 @@
+/*---------此文件不能更改------------*/
+.aui-checkbox {
+  font-family: inherit;
+  position: var(--checkbox-position-relative);
+  cursor: pointer;
+  display: var(--checkbox-display-inline-block);
+  white-space: nowrap;
+}
+.aui-checkbox__input {
+  display: var(--checkbox-display-inline-block);
+  cursor: pointer;
+  outline: none;
+  vertical-align: -8px;
+}
+.aui-checkbox__input.is-checked .aui-checkbox__inner {
+  background: var(--checkbox-ischecked-icon) no-repeat 2px 2px;
+  background-size:24px 24px;
+  border-color: var(--checkbox-border-color);
+}
+.aui-checkbox__inner {
+  display: block;
+  border: var(--checkbox-inner-border-base);
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  box-shadow: 0px 0px 1px 0px var(--chekbox-inner-box-shadow) inset;
+}
+.aui-checkbox__original {
+  opacity: 0;
+  display: none;
+}
+.aui-checkbox__label {
+  font-size: var(--checkbox-label-font-size);
+  color: var(--checkbox-icon-color);
+}
+.aui-checkbox__input.is-disabled.is-checked .aui-checkbox__inner {
+    background-color: #EEE;
+    border-color: var(--checkbox-disabled-border-color);
+}
+.aui-checkbox__input.is-disabled+.aui-checkbox__label {
+    color: #bbb;
+    cursor: not-allowed;
+}
+.aui-checkbox__input.is-disabled .aui-checkbox__inner {
+    border-color: var(--checkbox-disabled-border-color);
+    background-color: #e0e3e6;
+    cursor: not-allowed;
+}
+.aui-checkbox__input.is-disabled.is-checked .aui-checkbox__inner {
+    background: var(--checkbox-dischecked-icon) #e0e3e6 no-repeat 2px 2px;
+    background-size: 24px 24px;
+    cursor: not-allowed;
+}
+.aui-checkbox__input.is-indeterminate .aui-checkbox__inner {
+    background: #fff;
+    border-color: var(--checkbox-border-color);
+}
+.aui-checkbox__input.is-indeterminate .aui-checkbox__inner:before {
+    content: "";
+    display: block;
+    border: 3px solid #85c45f;
+    border-radius: 56px;
+    margin: 12px 2px;
+}
+.aui-checkbox__input.is-focus {
+  box-shadow: 0px 0px 1px 2px #50bfff;
+  border-radius: 4px;
+}

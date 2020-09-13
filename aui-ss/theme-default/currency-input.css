@@ -1,0 +1,77 @@
+/*---------此文件不能更改------------*/
+.aui-currency-input{
+  /* display:inline-block; */
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  border: var(--currency-input-border);
+  border-radius: var(--currency-input-border-radius);
+  height: calc(var(--currency-input--height) - 2px);
+}
+.aui-currency-input input{
+  font-family: inherit;
+  outline: none;
+  color: var(--color-font);
+  border: none;
+  width: 0;
+  height: calc(100% - 2px);
+  flex: auto;
+  padding-left: var(--currency-input--padding);
+  padding-right: var(--currency-input--padding);
+  border-radius: var(--border-radius);
+  font-size: var(--input--font--size);
+  background-color: transparent;
+}
+
+.aui-currency-input-focus{
+  border: var(--currency-input-focus-border);
+  box-shadow: var(--currency-input-focus-shadow);
+}
+
+::-webkit-input-placeholder{
+  color: var(--border-color-base);
+}
+.aui-currency-input input::-webkit-outer-spin-button,
+.aui-currency-input input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.aui-currency-input input:disabled{
+  background: var(--currency-input-disabled-bg);
+  cursor:not-allowed
+}
+
+.aui-currency-input-disabled input {
+  color: var(--currency-input-disabled-color);
+}
+
+
+.aui-currency-input-left{
+  text-align: left;
+}
+
+.aui-currency-input-center{
+  text-align: center;
+}
+
+.aui-currency-input-right{
+  text-align: right;
+}
+
+.aui-currency-input-disabled{
+  background: var(--currency-input-disabled-bg);
+  cursor:not-allowed
+}
+
+.aui-currency-input-small{
+  width: calc(var(--currency-input--width--samll) - 2px);
+}
+
+.aui-currency-input-normal{
+  width: calc(var(--currency-input--width--normal) - 2px);
+}
+
+.aui-currency-input-large{
+  width: calc(var(--currency-input--width--large) - 2px);
+}

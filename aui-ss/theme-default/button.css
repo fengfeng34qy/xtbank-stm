@@ -1,0 +1,219 @@
+/*---------此文件不能更改------------*/
+.aui-button{
+  font-family: inherit;
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  text-align: center;
+  vertical-align:middle;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  min-width:var(--width-primary);
+  height:var(--height-primary);
+  padding:var(--padding-vertical-primary) var(--button-padding-left-right-primary);
+  font-size:var(--font-size-primary);
+  background:var(--button-white);
+  border:1px solid var(--button-primary);
+  color:var(--button-primary);
+}
+.aui-button:active {
+  border-color: shade(var(--button-primary), var(--button-active-shade-percent));
+  color: shade(var(--button-primary), var(--button-active-shade-percent));
+ }
+/*----radius-----*/
+.aui-button--default-corner{
+  border-radius: var(--border-radius-default)
+}
+.aui-button--rounded-corner {
+  border-radius:var(--border-radius-rounded-corner);
+}
+.aui-button--square-corner{
+  border-radius: var(--border-radius-square-corner)
+}
+/*----color diffrent-----*/
+/*-----success-----*/
+.aui-button--success{
+  border:1px solid var(--button-success);
+  color:var(--button-success);
+}
+.aui-button--success:active{
+  border-color: shade(var(--button-success), var(--button-active-shade-percent));
+  color: shade(var(--button-success), var(--button-active-shade-percent));
+}
+/*----warning--------*/
+.aui-button--warning{
+  border:1px solid var(--button-warning);
+  color:var(--button-warning);
+}
+.aui-button--warning:active{
+  border-color:shade(var(--button-warning), var(--button-active-shade-percent));
+  color:shade(var(--button-warning), var(--button-active-shade-percent));
+}
+/*------info--------*/
+.aui-button--info{
+  border:1px solid var(--button-info);
+  color:var(--button-info);
+}
+.aui-button--info:active{
+  border-color:shade(var(--button-info), var(--button-active-shade-percent));
+  color:shade(var(--button-info), var(--button-active-shade-percent));
+}
+/*------home--------*/
+.aui-button--home{
+  border:1px solid #f27948;
+  color:#f27948;
+}
+/* .aui-button--home>{
+
+} */
+.aui-button--home:active{
+  border-color:shade(#f27948, var(--button-active-shade-percent));
+  color:shade(#f27948, var(--button-active-shade-percent));
+}
+/*------preStep--------*/
+.aui-button--preStep{
+  border:2px solid #a0cce9;
+  color:#a0cce9;
+}
+.aui-button--preStep:active{
+  border-color:shade(#a0cce9, var(--button-active-shade-percent));
+  color:shade(#a0cce9, var(--button-active-shade-percent));
+}
+/*------query--------*/
+.aui-button--query{
+  border:none;
+  color:#fff;
+  background-image:linear-gradient(270deg, #ff813d 0%, #d82c24 100%);
+}
+.aui-button--query:active{
+  /* border-color:shade(var(--button-query), var(--button-active-shade-percent)); */
+  /* color:shade(#fff, var(--button-active-shade-percent)); */
+  box-shadow: 0 2px 5px 0 rgba(244,106,54,0.50);
+}
+ /*------size diffrent-----------*/
+.aui-button--small{
+  padding:var(--padding-vertical-small) var(--button-padding-left-right-small);
+  min-width:var(--width-small);
+  height:var(--height-small);
+  font-size:var(--font-size-small);
+}
+.aui-button--large{
+  padding:var(--padding-vertical-large) var(--button-padding-left-right-large);
+  min-width:var(--width-large);
+  height:var(--height-large);
+  font-size:var(--font-size-large);
+}
+.aui-button--huge{
+  padding:var(--padding-vertical-huge) var(--button-padding-left-right-huge);
+  min-width:var(--width-huge);
+  height:var(--height-huge);
+  font-size: var(--font-size-huge);
+}
+.aui-button--bottom{
+  padding:var(--padding-vertical-bottom) var(--button-padding-left-right-bottom);
+  min-width:var(--width-bottom);
+  height:var(--height-bottom);
+  font-size: var(--font-size-bottom);
+}
+/*暂时修改button--bottom中文字的位置*/
+.aui-button--bottom>span{
+  float: left;
+}
+.aui-button::-moz-focus-inner {
+  border: 0;
+ }
+
+/*-------fill button--------*/
+.aui-button--is-fill{
+  border:1px solid var(--button-primary);
+  background:var(--button-fill-primary);
+  color:var(--button-white);
+}
+.aui-button--is-fill:active {
+  border:1px solid shade(var(--button-primary), var(--button-active-shade-percent));
+  background:shade(var(--button-primary), var(--button-active-shade-percent));
+  color:var(--button-white);
+ }
+/*-------color diffrent with fill button----------------*/
+/*------success------*/
+.aui-button--is-fill.aui-button--success{
+  border:1px solid var(--button-success);
+  background:var(--button-success);
+  color:var(--button-white);
+}
+.aui-button--is-fill.aui-button--success:active {
+  border:1px solid shade(var(--button-success), var(--button-active-shade-percent));
+  background:shade(var(--button-success), var(--button-active-shade-percent));
+  color:var(--button-white);
+}
+/*----warning-------*/
+.aui-button--is-fill.aui-button--warning{
+  border:1px solid var(--button-warning);
+  background:var(--button-warning);
+  color:var(--button-white);
+}
+.aui-button--is-fill.aui-button--warning:active{
+  border:1px solid shade(var(--button-warning), var(--button-active-shade-percent));
+  background:shade(var(--button-warning), var(--button-active-shade-percent));
+  color:var(--button-white);
+}
+/*-----info-------*/
+.aui-button--is-fill.aui-button--info{
+  border:1px solid var(--button-info);
+  background:var(--button-info);
+  color:var(--button-white);
+}
+.aui-button--is-fill.aui-button--info:active{
+  border:1px solid shade(var(--button-info), var(--button-active-shade-percent));
+  background:shade(var(--button-info), var(--button-active-shade-percent));
+  color:var(--button-white);
+}
+.aui-button--is-disabled.aui-button--is-fill,
+.aui-button--is-disabled.aui-button--is-fill:active{
+  opacity:1;
+  cursor: not-allowed;
+  background-image: none;
+  background: var(--button-disabled-fill);
+  border-color: var(--button-disabled-border);
+  color: var(--button-disabled-color);
+}
+
+/*------------disabled button--------------*/
+.aui-button--is-disabled,
+.aui-button--is-disabled:active{
+  opacity:1;
+  cursor: not-allowed;
+  background-image: none;
+  background: var(--button-white);
+  border-color: var(--button-disabled-border);
+  color: var(--button-disabled-color);
+}
+
+/*----------------button icon----------------*/
+.aui-button-icon{
+  height: 29px;
+  width: 29px;
+  margin-right: 16px;
+  display: inline-block;
+  position: relative;
+  float: left;
+}
+.aui-button-icon>i{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 29px;
+  width: 29px;
+}
+.aui-button--home>.aui-button-icon>i{
+  color: #f27948;
+}
+.aui-button--preStep>.aui-button-icon>i{
+  color: #a0cce9;
+}
+.aui-button--query>.aui-button-icon>i{
+  color: #fff;
+}
+

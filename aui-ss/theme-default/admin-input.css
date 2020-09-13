@@ -1,0 +1,41 @@
+/*---------此文件不能更改------------*/
+.aui-admin-input {
+  display: inline-block;
+}
+.aui-admin-input input{
+  font-family: inherit;
+  outline: none;
+  color: var(--admin-input-color);
+  border: var(--admin-input-border);
+  border-radius: var(--admin-input-border-radius);
+  height: var(--admin-input-height);
+  width: var(--admin-input-width);
+  background-color: var(--admin-input-background-color);
+  font-size: var(--admin-input-size);
+  padding:0;
+  padding-left: var(--admin-input-padding);
+}
+.aui-admin-input input:focus{
+  border: var(--admin-focus-border);
+  box-shadow: var(--admin-focus-box-shadow);
+}
+::-webkit-input-placeholder{
+  color: var(--admin-placeholder-color);
+}
+.aui-admin-input input::-webkit-outer-spin-button,
+.aui-admin-input input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.aui-admin-input input:disabled{
+  cursor:not-allowed
+}
+
+.aui-admin-input-text{
+  background: var(--admin-input-background-text);
+}
+
+.aui-admin-input-password{
+  background: var(--admin-input-background-password);
+}

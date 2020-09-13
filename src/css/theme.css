@@ -1,0 +1,187 @@
+﻿:root {
+  --theme-bg-color: #fff;                              /*-------主题背景色(包含header)-------*/
+  --theme-font-family: "黑体";                            /*-------主题字体-------*/
+  --trade-bg-color: #FCFCFC;                              /*-------交易菜单、管理端菜单背景色-------*/
+  --trade-swiper-pagination: 18px;                        /*-------交易菜单分页焦点切换圆大小-------*/
+  --trade-swiper-pagination-active: #108EE9;              /*-------交易菜单分页焦点切换圆选中颜色-------*/
+  --trade-page-bg-color: #fff;                            /*-------交易页面、管理端页面框内背景色-------*/
+  --menu-card-bg-color: #fff;                             /*-------交易菜单卡片背景色-------*/
+  --menu-card-font-size: 24px;                            /*-------交易菜单卡片字体大小-------*/
+  --menu-card-font-color: #333;                           /*-------交易菜单卡片字体颜色-------*/
+  --header-font-color: #108EE9;                              /*-------页面header/footer字体颜色-------*/
+  --header-logo-url: url(/static/resource/header/logo.png);/*------header-logo图片路径-------*/
+  --tile-header-font-color: #fff;                          /*-------菜单卡片header字体颜色-------*/
+  --tile-header-font-size: 32px;                             /*-------菜单卡片header字体大小-------*/
+  --tile-block-font-size: 28px;                              /*-------菜单卡片header字体大小-------*/
+  --header-logo-width: 300px;                             /*-------header-logo图片宽度-------*/
+  --header-logo-height: 120px;                             /*-------header-logo图片高度-------*/
+  --footer-bg-url: url(../../static/resource/footer/footerbg.png);/*----footer背景图片路径-------*/
+  --footer-bg-height: 154px;                              /*-------footer背景图图片高度-------*/
+  --footer-font-size: 20px;                               /*-------footer字体大小-------*/
+
+  
+  --trade-title-color: #108EE9;                           /*-------交易界面标题颜色（title）-------*/
+  --trade-title-size: 30px;                               /*-------交易界面标题字体大小（title）-------*/
+  --trade-title-line-color: #108EE9;                      /*-------交易界面标题线条颜色（title）-------*/
+  --trade-font-color: #896e6e;                            /*-------交易界面内容字体颜色-------*/
+  --trade-font-size: 20px;                                /*-------交易界面内容字体大小-------*/
+  --h1-font-size: 36px;                                   /*-------h1-------*/
+  --h2-font-size: 30px;                                   /*-------h2-------*/
+  --h3-font-size: 24px;                                   /*-------h3-------*/
+  --h4-font-size: 18px;                                   /*-------h4-------*/
+  --h5-font-size: 14px;                                   /*-------h5-------*/
+  --h6-font-size: 12px;                                   /*-------h6-------*/
+}
+
+#app {
+  background: var( --theme-bg-color );
+  font-family: var( --theme-font-family );
+}
+
+.trade-menu {
+  background: var( --trade-bg-color );
+}
+
+.menu-card {
+  background: var( --menu-card-bg-color );
+}
+
+.menu-card p {
+  /*font-size: var( --menu-card-font-size );*/
+  /*color: var( --menu-card-font-color );*/
+}
+
+.step-page-navigator {
+  /*background: var( --trade-bg-color );*/
+}
+
+.step-page-body {
+  /*background: var( --trade-page-bg-color );*/
+  /*border: 1px solid #dcd2c0;*/
+}
+
+.admin-menu {
+  /*background: var( --trade-bg-color );*/
+}
+
+.non-step-page-navigator {
+  /*background: var( --trade-bg-color );*/
+}
+
+.non-step-page-body {
+  /*background: var( --trade-page-bg-color );*/
+  /*border: 1px solid #dcd2c0;*/
+}
+
+.view-header {
+  background: var( --theme-bg-color );
+  color: var( --header-font-color );
+}
+
+.header-logo {
+  width: var( --header-logo-width );
+  height: var( --header-logo-height );
+  background: var( --header-logo-url ) 0 0 no-repeat;
+  background-size: 280px;
+  background-position-y: -5px;
+}
+
+.view-footer {
+  color: var( --header-font-color );
+  font-size: var( --footer-font-size );
+}
+
+.footer-bg {
+  height: var( --footer-bg-height );
+  background: var( --footer-bg-url ) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+
+.page-header .content {
+  color: var( --trade-title-color );
+  font-size: var( --trade-title-size );
+}
+
+.page-header .underline {
+  border-bottom: 1px solid var( --trade-title-line-color );
+}
+
+.trade-content-font {
+  color: var( --trade-font-color );
+  font-size: var( --trade-font-size );
+}
+
+.h1 {
+  font-size: var( --h1-font-size );
+}
+
+.h2 {
+  font-size: var( --h2-font-size );
+}
+
+.h3 {
+  font-size: var( --h3-font-size );
+}
+
+.h4 {
+  font-size: var( --h4-font-size );
+}
+
+.h5 {
+  font-size: var( --h5-font-size );
+}
+
+.h6 {
+  font-size: var( --h6-font-size );
+}
+
+.swiper-pagination-bullet {
+  width: var(--trade-swiper-pagination) !important;
+  height: var(--trade-swiper-pagination) !important
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--trade-swiper-pagination-active) !important
+}
+
+.tile-menu {
+  font-size: var( --menu-card-font-size );
+  color: var( --menu-card-font-color );
+}
+
+.tile-group-header {
+  color: var( --tile-header-font-color );
+}
+
+.tile-group-header-title {
+  font-size: var( --tile-header-font-size );
+}
+
+.tile-list {
+  background: var( --menu-card-bg-color );
+  font-size: var( --menu-card-font-size );
+  color: var( --menu-card-font-color );
+}
+
+.tile-block {
+  font-size: var( --tile-block-font-size );
+  color: var( --tile-header-font-color );
+}
+
+.tile-dialog {
+  font-family: var( --theme-font-family );
+}
+
+.tile-dialog-header {
+  font-size: var( --tile-header-font-size );
+  color: var( --tile-header-font-color );
+}
+
+.tile-item-disable {
+  filter: grayscale(1);
+}
+
+.item-with-active:active {
+  background: #EDEDED;
+  border-radius: 10px;
+}

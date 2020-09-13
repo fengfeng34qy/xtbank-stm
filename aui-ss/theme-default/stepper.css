@@ -1,0 +1,226 @@
+/*---------此文件不能更改------------*/
+/*********************Stepper*********************/
+.aui-stepper {
+  font-size: 0;
+  display: flex;
+}
+.aui-stepper > :last-child .aui-step__line {
+  display: none;
+}
+.aui-stepper.is-vertical {
+  height: 100%;
+  flex-flow: column;
+}
+.aui-stepper.is-horizontal {
+  white-space: nowrap;
+}
+.aui-stepper.is-horizontal.is-center {
+  text-align: var(--step-horizontal-align);
+  /* padding-left: var(--step-horizontal-padding); */
+}
+.aui-stepper .is-flex {
+  flex-basis: auto!important;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+/*********************StepperItem*********************/
+.aui-stepper-item {
+  position: relative;
+  flex-shrink: 1;
+  vertical-align: top;
+}
+.aui-stepper-item:last-child .aui-step__main {
+  padding-right: 0;
+}
+.aui-stepper-item.is-horizontal {
+  display: inline-block;
+}
+.aui-stepper-item.is-vertical .aui-step__head,.aui-stepper-item.is-vertical .aui-step__main {
+  display: inline-block;
+}
+.aui-stepper-item.is-horizontal .aui-step__main {
+  padding-top: var(--step-title-padding);
+  margin-top: -12px;
+}
+.aui-stepper-item.is-vertical .aui-step__main {
+  padding-left: var(--step-title-padding);
+}
+.aui-step__line {
+  display: inline-block;
+  position: absolute;
+  border-color: inherit;
+  background-color: var(--step-line-bottom-color);
+}
+.aui-step__line.is-icon.is-horizontal {
+  right: 4px;
+}
+.aui-step__line.is-horizontal {
+  top: var(--step-line-offset-size);
+  height: var(--step-line-bottom-size);
+  left: calc(var(--step-circle-size) + 4px + var(--step-line-margin));
+  right: var(--step-line-margin);
+}
+.aui-step__line.is-vertical {
+  width: var(--step-line-bottom-size);
+  box-sizing: border-box;
+  top: calc(var(--step-circle-size) + 4px + var(--step-line-margin));
+  bottom: var(--step-line-margin);
+  left: var(--step-line-offset-size);
+  overflow: var(--step-line-overflow);
+}
+.aui-step__line.is-horizontal .aui-step__line-inner {
+  display: block;
+  height: var(--step-line-top-size);
+  /* border-style: solid; */
+  background: var(--step-line-top-color);
+  transition: width 150ms;
+  width: 0;
+  /* height: 0; */
+  margin-top: calc((var(--step-line-bottom-size) - var(--step-line-top-size))/2);
+  position: absolute;
+  z-index: 100;
+  left:-3px;
+}
+.aui-step__line.is-vertical .aui-step__line-inner {
+  display: block;
+  width: var(--step-line-top-size);
+  /* border-style: solid; */
+  background: var(--step-line-top-color);
+  transition: height 150ms;
+  /* width: 0; */
+  height: 0;
+  margin-left: calc((var(--step-line-bottom-size) - var(--step-line-top-size))/2);
+  position: absolute;
+  z-index: 100;
+  top:-3px;
+}
+.aui-step__icon {
+  display: block;
+  line-height: calc(var(--step-circle-size) + 2px);
+}
+.aui-step__icon > * {
+  line-height: inherit;
+  vertical-align: middle;
+}
+.aui-step__head {
+  circle: calc(var(--step-circle-size)+2px) transparent;
+  text-align: center;
+  line-height: var(--step-circle-size);
+  font-size: var(--step-circle-size);
+  vertical-align: top;
+  transition: all 100ms;
+}
+.aui-step__head::before {
+  content: "";
+  width:var(--step-circle-size);
+  height:var(--step-circle-size);
+  border-radius: calc(var(--step-circle-size)/2 + 2px);
+  border:2px solid var(--step-circle-border-color);
+  position: absolute;
+  left:0;
+  top:0;
+  z-index: 10;
+}
+.aui-step__head.is-text {
+  font-size: var(--step-number-size);
+  border-width: 1px;
+  border-style: solid;
+  margin: 1px;
+}
+.aui-step__head.is-text.is-process {
+  color: var(--step-executing-number-color);
+  background: var(--step-executing-circle-background);
+  border: var(--step-executing-circle-border);
+}
+.aui-step__head.is-text.is-wait {
+  color: var(--step-unexecuted-number-color);
+  background: var(--step-unexecuted-circle-background);
+  border: var(--step-unexecuted-circle-border);
+}
+.aui-step__head.is-text.is-success {
+  color: var(--color-white);
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+}
+.aui-step__head.is-text.is-error {
+  color: var(--color-white);
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+.aui-step__head.is-text.is-finish {
+  color: var(--step-executed-number-color);
+  background: var(--step-executed-circle-background);
+  border: var(--step-executed-circle-border);
+  transition: none;
+}
+.aui-step__head.is-process {
+  color: var(--step-executing-circle-background);
+  border-color: var(--step-executing-circle-background);
+}
+.aui-step__head.is-wait {
+  color: var(--step-unexecuted-circle-background);
+  border-color: var(--step-unexecuted-circle-background);
+}
+.aui-step__head.is-success {
+  color: var(--color-success);
+  border-color: var(--color-success);
+}
+.aui-step__head.is-error {
+  color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+.aui-step__head.is-finish {
+  color: var(--step-executed-circle-background);
+  border-color: var(--step-executed-circle-background);
+}
+.aui-step__main {
+  padding-right: 10px;
+  text-align: left;
+}
+.aui-step__title {
+  font-size: var(--step-title-size);
+  line-height: calc(var(--step-circle-size) + 4px);
+  display: inline-block;
+}
+.aui-step__title.is-process {
+  font-weight: var(--step-executing-title-weight);
+  color: var(--step-executing-title-color);
+}
+.aui-step__title.is-wait {
+  font-weight: var(--step-unexecuted-title-weight);
+  color: var(--step-unexecuted-title-color);
+}
+.aui-step__title.is-success {
+  font-weight: 700;
+  color: var(--color-success);
+}
+.aui-step__title.is-error {
+  font-weight: 700;
+  color: var(--color-danger);
+}
+.aui-step__title.is-finish {
+  font-weight: var(--step-executed-title-weight);
+  color: var(--step-executed-title-color);
+}
+.aui-step__description {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 14px;
+}  
+.aui-step__description.is-process {
+  color: var(--color-base-silver);
+}
+.aui-step__description.is-wait {
+  color: var(--step-unexecuted-circle-background);
+} 
+.aui-step__description.is-success {
+  color: var(--color-success);
+}   
+.aui-step__description.is-error {
+  color: var(--color-danger);
+}    
+.aui-step__description.is-finish {
+  color: var(--step-executed-circle-background);
+}        
+/*********************step*********************/
+

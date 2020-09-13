@@ -1,0 +1,183 @@
+ /*---------此文件不能更改------------*/
+
+ .aui-select .fade-enter-active,
+ .fade-leave-active {
+   transition: opacity .5s;
+ }
+
+ .aui-select .fade-enter,
+ .fade-leave-to {
+   opacity: 0;
+ }
+
+ .aui-select {
+   font-family: inherit;
+   /* width: var(--select-width); */
+   height: var(--select-height);
+   position: relative;
+   border-radius: var(--select-border-radius);
+   border: var(--select-border-base);
+   font-size: var(--select-font-size);
+   display: inline-block;
+ }
+
+ .aui-select-box {
+   height: 100%;
+ }
+
+ .aui-option {
+  border: var(--option-border);
+  border-radius: var(--option-radius);
+  box-shadow: var(--option-box-shadow);
+  border-top: var(--option-border-top);
+ }
+
+ .aui-option-top-line {
+   width: calc(100% - 40px);
+   border-top: var(--option-top-line);
+   margin-left: 20px;
+   position: absolute;
+   top: 0;
+ }
+
+ .aui-select .aui-input {
+   /* display: block; */
+   width: var(--select-width);
+   /* width: 100%; */
+   border: none;
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   outline: none;
+   cursor: pointer;
+   padding-left: var(--select-input-padding-left);
+   box-sizing: border-box;
+   border-radius: var(--select-border-radius);
+   color: var(--select-color);
+   font-size: var(--select-font-size);
+ }
+ /*.aui-select.focus{
+      border-color:var(--select-input-focus-color); 
+    }*/
+
+ .aui-select .aui-option-list {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   margin-left: var(--option-margin-left);
+ }
+
+ .aui-select .aui-select__icon {
+   position: absolute;
+   cursor: pointer;
+   /* width: var(--select-icon-width); */
+   /* height: 100%; */
+   width: 14px;
+   top: var(--select-icon-top);
+   right: var(--select-icon-right);
+   display: block;
+   /* border: 1px solid red; */
+ }
+
+ .aui-select .aui-select__icon b {
+   width: 0;
+   display: inline-block;
+   vertical-align: middle;
+   border: 7px solid transparent;
+   border-top: 7px solid #b8a0a0;
+   transition: transform .3s;
+   transform-origin: 1px 3px;
+ }
+
+ .aui-select .aui-select-small {
+   width: var(--select-width-small);
+ }
+
+ .aui-select .aui-select-normal {
+   width: var(--select-width);
+ }
+
+ .aui-select .aui-select-large {
+   width: var(--select-width-large);
+ }
+
+ .aui-select .rem {
+   -moz-transform: scaleY(-1);
+   -webkit-transform: scaleY(-1);
+   -o-transform: scaleY(-1);
+   transform: scaleY(-1);
+ }
+
+ /* .aui-select .focus {
+   box-shadow: var(--input-shadow);
+ } */
+
+ .aui-select-focus{
+  border: var(--select-focus-border);
+  box-shadow: var(--select-focus-shadow);
+}
+
+ .aui-select .disabled {
+   background: var(--select-disabled-bg);
+   cursor: not-allowed;
+ }
+
+ .aui-select-input-disabled{
+   background: var(--select-disabled-bg);
+   cursor:not-allowed
+ }
+
+ .aui-option {
+   position: absolute;
+   z-index: 9999;
+   top: var(--option-top);
+   left: var(--option-left);
+   margin-top: 34px;
+   background: #fff;
+   width: 100%;
+   text-align: left;
+   color: var(--select-color);
+ }
+
+ .aui-option ul {
+   overflow-y: auto;
+ }
+
+ .aui-option__item.sel {
+   background: var(--option-item-selected-background);
+ }
+
+ .aui-option__item:hover {
+   background-color: var(--option-item-selected-background)
+ }
+
+ .aui-option__item.sel:hover {
+   background-color: var(--option-item-selected-hover-background)
+ }
+
+ .aui-option__item {
+   font-size: var(--select-font-size);
+   padding: 8px 10px;
+   position: relative;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   height: var(--option-item-height);
+   line-height: 1.5;
+   box-sizing: border-box;
+   cursor: pointer;
+   border-bottom: var(--option-item-border-bottom);
+ }
+
+ /*滚动条样式*/
+ .aui-option-list::-webkit-scrollbar {/*滚动条整体样式*/
+  width: var(--option-scrollbar-width);     /*高宽分别对应横竖滚动条的尺寸*/
+  height: var(--option-scrollbar-height);
+}
+.aui-option-list::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+  border-radius: var(--option-scrollbar-radius);
+  background: var(--option-scrollbar-thumb-bg);
+}
+.aui-option-list::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  background: var(--option-scrollbar-track-bg);
+}

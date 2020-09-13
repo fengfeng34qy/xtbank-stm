@@ -1,0 +1,15 @@
+{
+  "name": "awp-ui-page-manager-vue",
+  "version": "4.0.0",
+  "main": "index.js",
+  "files": [
+    "lib/page-manager.js",
+    "index.js"
+  ],
+  "modules": [
+    {
+      "name": "PageManager",
+      "description": "交易页面管理器。"
+    }
+  ]
+}

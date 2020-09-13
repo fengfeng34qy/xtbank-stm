@@ -1,0 +1,138 @@
+[
+  {
+    "path": "./static/resource/voice-baidu/insertIdCard.ogg",
+    "name": "insertIdCard"
+  },
+  {
+    "path": "static/resource/voice-baidu/insertBankCard.ogg",
+    "name": "insertBankCard"
+  },
+  {
+    "path": "static/resource/voice-baidu/psd.ogg",
+    "name": "psd"
+  },
+  {
+    "path": "static/resource/voice-baidu/psdTwo.ogg",
+    "name": "psdTwo"
+  },
+   {
+    "path": "static/resource/voice-baidu/authorization.ogg",
+    "name": "authorization"
+  },
+  {
+    "path": "static/resource/voice-baidu/takeIdCard.ogg",
+    "name": "takeIdCard"
+  },
+  {
+    "path": "static/resource/voice-baidu/takeBankCard.ogg",
+    "name": "takeBankCard"
+  },
+  {
+    "path": "static/resource/voice-baidu/insertCardOrPassbook.ogg",
+    "name": "insertCardOrPassbook"
+  },
+  {
+    "path": "static/resource/voice-baidu/passbookFive.ogg",
+    "name": "passbookFive"
+  },
+  {
+    "path": "static/resource/voice-baidu/passbookFour.ogg",
+    "name": "passbookFour"
+  },
+  {
+    "path": "static/resource/voice-baidu/passbookOne.ogg",
+    "name": "passbookOne"
+  },
+   {
+    "path": "static/resource/voice-baidu/passbookThree.ogg",
+    "name": "passbookThree"
+  },
+  {
+    "path": "static/resource/voice-baidu/passbookTwo.ogg",
+    "name": "passbookTwo"
+  },
+  {
+    "path": "static/resource/voice-baidu/nextPage.ogg",
+    "name": "nextPage"
+  },
+  {
+    "path": "static/resource/voice-baidu/insertPassbook.ogg",
+    "name": "insertPassbook"
+  },
+  {
+    "path": "static/resource/voice-baidu/takePassbook.ogg",
+    "name": "takePassbook"
+  },
+  {
+    "path": "static/resource/voice-baidu/takePassbook.ogg",
+    "name": "inputAccountNo"
+  },
+  {
+    "path": "static/resource/voice-baidu/inputCertificate.ogg",
+    "name": "inputCertificate"
+  },
+  {
+    "path": "static/resource/voice-baidu/takeCertificate.ogg",
+    "name": "takeCertificate"
+  },
+  {
+    "path": "static/resource/voice-baidu/putCertificateBox.ogg",
+    "name": "putCertificateBox"
+  },
+  {
+    "path": "static/resource/voice-baidu/agentIdcard.ogg",
+    "name": "agentIdcard"
+  },
+  {
+    "path": "static/resource/voice-baidu/inputCashOutMoney.ogg",
+    "name": "inputCashOutMoney"
+  },
+  {
+    "path": "static/resource/voice-baidu/readIdCard.ogg",
+    "name": "readIdCard"
+  },
+  {
+    "path": "static/resource/voice-baidu/takeMoney.ogg",
+    "name": "takeMoney"
+  },
+  {
+    "path": "static/resource/voice-baidu/cashInIng.ogg",
+    "name": "cashInIng"
+  },
+  {
+    "path": "static/resource/voice-baidu/checkMoney.ogg",
+    "name": "checkMoney"
+  },
+  {
+    "path": "static/resource/voice-baidu/checkMoneyResult.ogg",
+    "name": "checkMoneyResult"
+  },
+  {
+    "path": "static/resource/voice-baidu/inputCardNo.ogg",
+    "name": "inputCardNo"
+  },
+  {
+    "path": "static/resource/voice-baidu/putMoneyAccess.ogg",
+    "name": "putMoneyAccess"
+  },
+  {
+    "path": "static/resource/voice-baidu/readWarn.ogg",
+    "name": "readWarn"
+  },
+  {
+    "path": "static/resource/voice-baidu/takeUnableMoney.ogg",
+    "name": "takeUnableMoney"
+  },
+  {
+    "path": "static/resource/voice-baidu/benrenganying.ogg",
+    "name": "benrenganying"
+  },
+  {
+    "path": "static/resource/voice-baidu/agentganying.ogg",
+    "name": "agentganying"
+  },
+  {
+    "path": "static/resource/voice-baidu/coining.ogg",
+    "name": "coining"
+  }
+]

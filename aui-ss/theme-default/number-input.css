@@ -1,0 +1,77 @@
+/*---------此文件不能更改------------*/
+.aui-number-input {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  border: var(--number-input-border);
+  border-radius: var(--number-input-border-radius);
+  height: calc(var(--number-input--height) - 2px);
+  font-size: var(--input--font--size);
+}
+.aui-number-input input{
+  font-family: inherit;
+  outline: none;
+  color: var(--color-font);
+  border: none;
+  width: 0;
+  height: calc(100% - 2px);
+  flex: auto;
+  padding-left: var(--number-input--padding);
+  padding-right: var(--number-input--padding);
+  border-radius: var(--border-radius);
+  font-size: inherit;
+  background-color: transparent;
+}
+
+.aui-number-input-focus{
+  border: var(--number-input-focus-border);
+  box-shadow: var(--number-input-focus-shadow);
+}
+
+::-webkit-input-placeholder{
+  color: var(--border-color-base);
+}
+.aui-number-input input::-webkit-outer-spin-button,
+.aui-number-input input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.aui-number-input input:disabled{
+  background: var(--number-input-disabled-bg);
+  cursor:not-allowed
+}
+
+.aui-number-input-disabled input {
+  color: var(--number-input-disabled-color);
+}
+
+
+.aui-number-input-left{
+  text-align: left
+}
+
+.aui-number-input-right{
+  text-align: right
+}
+
+.aui-number-input-center{
+  text-align: center
+}
+
+.aui-number-input-disabled{
+  background: var(--number-input-disabled-bg);
+  cursor:not-allowed
+}
+
+.aui-number-input-small{
+  width: calc(var(--number-input--width--samll) - 2px);
+}
+
+.aui-number-input-normal{
+  width: calc(var(--number-input--width--normal) - 2px);
+}
+
+.aui-number-input-large{
+  width: calc(var(--number-input--width--large) - 2px);
+}

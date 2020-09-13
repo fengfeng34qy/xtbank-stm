@@ -1,0 +1,85 @@
+/*---------此文件不能更改------------*/
+.aui-text-area {
+  display: inline-block;
+}
+.aui-text-area textarea{
+  font-family: inherit;
+  outline: none;
+  color: var(--color-text-area);
+  border: var(--border-text-area);
+  padding: var(--padding-text-area);
+  border-radius: var(--border-radius-text-area);
+  height: var(--height-text-area);
+  width: var(--width-text-area);
+  font-size: var(--fontsize-text-area);
+  resize : none;
+}
+.aui-text-area ::-webkit-textarea-placeholder{
+  color: var(--border-color-base);
+}
+.aui-text-area textarea:focus {
+  /* box-shadow:var(--input-shadow); */
+  border: var(--text-area-focus-border);
+  box-shadow: var(--text-area-focus-shadow);
+}
+.aui-text-area textarea::-webkit-outer-spin-button,
+.aui-text-area textarea::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.aui-text-area textarea:disabled{
+  background: var(--textarea-disabled-bg);
+  cursor:not-allowed;
+}
+/*------------------2018-2-9天阳textArea样式------------*/
+/*在应用时加入属性:ifTextAreaLabel="true" labelName="xxxxxxxx"以使用下面样式*/
+.aui-text-area.withLable{
+  width: var(--width-label-text-area);
+  height: var(--height-label-text-area);
+  border: var(--border-text-area);
+  border-radius: var(--border-radius-label-text-area);
+  box-sizing: border-box;
+  padding: 15px;
+  transition:box-shadow .3s;
+}
+.aui-text-area.withLable>.textAreaLabel{
+  width: var(--width-label-text-area-label);
+  height: var(--height-label-text-area-label);
+  border: none;
+  float: left;
+  border-right: var(--border-label-text-area);
+  color: var(--color-label-text-area);
+  font-size: 20px;
+  font-family: PingFangSC-Regular;
+  line-height: 20px;
+  font-weight: 500;
+  margin: 5px 0;
+}
+.aui-text-area.withLable>textarea{
+  display: block;
+  width: var(--width-label-text-area-input);
+  height: 100%;
+  border: none;
+  float: left;
+  overflow: hidden;
+  padding: 0;
+  margin-left:20px; 
+  font-family: PingFangSC-Regular;
+  font-size: 20px;
+  color: #333333;
+  line-height: 30px;
+}
+.aui-text-area.withLable>textarea:focus{
+  box-shadow: none;
+}
+.aui-text-area.withLable>.textAreaLabel{
+  display: block;
+}
+.textAreaLabel{
+  display: none
+}
+.aui-text-area.aui-textArea-focus{
+  border: var(--text-area-focus-border);
+  box-shadow: var(--text-area-focus-shadow);
+}

@@ -1,0 +1,32 @@
+{
+  "name": "awp-plugin-timing",
+  "version": "4.0.0",
+  "main": "index.js",
+  "files": [
+    "lib/timer.js",
+    "lib/count-down-timer.js",
+    "lib/global-timing-service.js",
+    "index.js"
+  ],
+  "dependenciesDescription": {
+    "awp-plugin-interaction-checker": "^4.0"
+  },
+  "modules": [
+    {
+      "name": "Timer",
+      "description": "定时操作集中的计时器Timer。"
+    },
+    {
+      "name": "CountDownTimer",
+      "description": "定时操作集中的倒计时CountDownTimer。"
+    },
+    {
+      "name": "CountDownTimeoutMode",
+      "description": "定时操作集中的倒计时模式的枚举对象(alawaysCountDown: 0-[总是倒计时],resetOnInput: 1-[输入操作重置倒计时])。"
+    },
+    {
+      "name": "GlobalTimingService",
+      "description": "定时操作集中的全局定时服务GlobalTimingService。"
+    }
+  ]
+}

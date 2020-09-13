@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataBasket>
+    <Ade name="PayActName"/>
+    <Ade name="PayActNo"/>
+    <Ade name="PayActPin"/>
+    <Ade name="PayeeActName"/>
+    <Ade name="PayeeActNo"/>
+    <Ade name="PayeeBankName"/>
+    <Ade name="PayeeBankNo"/>
+    <Ade name="PayeeCertNo"/>
+    <Ade name="PayeeCertType"/>
+    <Ade name="PayeeName"/>
+    <Ade name="TransferPriority"/>
+    <Ade name="PS"/>
+    <Ade name="Amount"/>
+    <Ade name="AvlBalance"/>
+    <Ade name="CustName"/>
+    <Ade name="AcctName"/>
+    <Ade name="AcctNo"/>
+</DataBasket>

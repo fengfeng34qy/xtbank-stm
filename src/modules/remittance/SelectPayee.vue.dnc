@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataBasket>
+    <Ade name="TransferHistoryDetail"/>
+    <Ade name="PayeeBankNo"/>
+    <Ade name="PayeeActNo"/>
+    <Ade name="PayeeActName"/>
+    <Ade name="PayeeBankName"/>
+</DataBasket>

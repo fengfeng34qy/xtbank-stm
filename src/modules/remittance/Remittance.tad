@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TradeAssembly caption="">
+    <DataBasket>
+        <Ade name="CardBoxNo"/>
+        <Ade name="CardType"/>
+        <Ade name="CardNo"/>
+        <Ade name="VoucherNo"/>
+        <Ade name="RetCardFlag"/>
+        <Ade name="RetCardRsnCode"/>
+        <Ade name="RetCardRsnDesc"/>
+        <Ade name="CustPhoto"/>
+        <Ade name="SignPicBase64"/>
+        <Ade name="PhoneNo"/>
+        <Ade name="TranResult"/>
+        <Ade name="CustName"/>
+        <Ade name="CustNo"/>
+        <Ade name="PrintData"/>
+        <Ade name="AvlBalance"/>
+        <Ade name="AcctName"/>
+        <Ade name="AcctNo"/>
+        <Ade name="TransferHistoryDetail"/>
+        <Ade name="IDType"/>
+        <Ade name="IDNo"/>
+        <Ade name="PinBlock"/>
+        <Ade name="Amount"/>
+        <Ade name="PayActName"/>
+        <Ade name="PayActNo"/>
+        <Ade name="PayeeActName"/>
+        <Ade name="PayeeActNo"/>
+        <Ade name="PayeeBankNo"/>
+        <Ade name="PayeeBankName"/>
+        <Ade name="PS"/>
+        <Ade name="TransferPriority"/>
+        <Ade name="cardData"/>
+        <Ade name="PayeeCertNo"/>
+        <Ade name="PayeeName"/>
+        <Ade name="PayeeCertType"/>
+        <Ade name="PayActPin"/>
+        <Ade name="CustType"/>
+        <Ade name="Address"/>
+        <Ade name="CertType"/>
+        <Ade name="City"/>
+        <Ade name="Province"/>
+        <Ade name="IDName"/>
+        <Ade name="TelNo"/>
+        <Ade name="CheckResult"/>
+        <Ade name="CertNo"/>
+        <Ade name="IDCheckPhoto"/>
+        <Ade name="AcctType"/>
+        <Ade name="DepositTerm"/>
+        <Ade name="DepositType"/>
+        <Ade name="AcctStatus"/>
+        <Ade name="Currency"/>
+        <Ade name="AcctClass"/>
+        <Ade name="DrawMethod"/>
+        <Ade name="BookAcctNo"/>
+        <Ade name="ValueDate"/>
+        <Ade name="DueDate"/>
+        <Ade name="Balance"/>
+        <Ade name="VoucherType"/>
+        <Ade name="CDAcctNo"/>
+        <Ade name="AuthTellerNo"/>
+        <Dnc path="/selfservice/src/modules/shared/Authorization.vue.dnc"/>
+    </DataBasket>
+    <DataRule/>
+    <CanEditSdb value="false"/>
+    <MainProcess path="/selfservice/src/mpt/selfservice-trade.mpt">
+        <Node caption="" id="2" type="UIStep">
+            <InArg name="path">"/selfservice/src/modules/remittance/Remittance.auf"</InArg>
+            <InArg name="target"/>
+            <InArg name="title"/>
+            <InArg name="targetArgMap"/>
+            <Mappings path="/selfservice/src/modules/remittance/Remittance.tad">
+                <Mapping source="CardBoxNo" target="CardBoxNo"/>
+                <Mapping source="CardType" target="CardType"/>
+                <Mapping source="VoucherNo" target="VoucherNo"/>
+                <Mapping source="RetCardRsnCode" target="RetCardRsnCode"/>
+                <Mapping source="RetCardRsnDesc" target="RetCardRsnDesc"/>
+                <Mapping source="RetCardFlag" target="RetCardFlag"/>
+                <Mapping source="CardNo" target="CardNo"/>
+                <Mapping source="CustPhoto" target="CustPhoto"/>
+                <Mapping source="SignPicBase64" target="SignPicBase64"/>
+                <Mapping source="PhoneNo" target="PhoneNo"/>
+                <Mapping source="TranResult" target="TranResult"/>
+                <Mapping source="CustName" target="CustName"/>
+                <Mapping source="CustNo" target="CustNo"/>
+                <Mapping source="PrintData" target="PrintData"/>
+                <Mapping source="AvlBalance" target="AvlBalance"/>
+                <Mapping source="AcctName" target="AcctName"/>
+                <Mapping source="AcctNo" target="AcctNo"/>
+                <Mapping source="TransferHistoryDetail" target="TransferHistoryDetail"/>
+                <Mapping source="IDType" target="IDType"/>
+                <Mapping source="IDNo" target="IDNo"/>
+                <Mapping source="PinBlock" target="PinBlock"/>
+                <Mapping source="Amount" target="Amount"/>
+                <Mapping source="PayActName" target="PayActName"/>
+                <Mapping source="PayActNo" target="PayActNo"/>
+                <Mapping source="PayeeActName" target="PayeeActName"/>
+                <Mapping source="PayeeActNo" target="PayeeActNo"/>
+                <Mapping source="PayeeBankNo" target="PayeeBankNo"/>
+                <Mapping source="PayeeBankName" target="PayeeBankName"/>
+                <Mapping source="PS" target="PS"/>
+                <Mapping source="TransferPriority" target="TransferPriority"/>
+                <Mapping source="cardData" target="cardData"/>
+                <Mapping source="PayeeCertNo" target="PayeeCertNo"/>
+                <Mapping source="PayeeName" target="PayeeName"/>
+                <Mapping source="PayeeCertType" target="PayeeCertType"/>
+                <Mapping source="PayActPin" target="PayActPin"/>
+                <Mapping source="CustType" target="CustType"/>
+                <Mapping source="Address" target="Address"/>
+                <Mapping source="CertType" target="CertType"/>
+                <Mapping source="City" target="City"/>
+                <Mapping source="Province" target="Province"/>
+                <Mapping source="IDName" target="IDName"/>
+                <Mapping source="TelNo" target="TelNo"/>
+                <Mapping source="CheckResult" target="CheckResult"/>
+                <Mapping source="CertNo" target="CertNo"/>
+                <Mapping source="IDCheckPhoto" target="IDCheckPhoto"/>
+                <Mapping source="AcctType" target="AcctType"/>
+                <Mapping source="DepositTerm" target="DepositTerm"/>
+                <Mapping source="DepositType" target="DepositType"/>
+                <Mapping source="AcctStatus" target="AcctStatus"/>
+                <Mapping source="Currency" target="Currency"/>
+                <Mapping source="AcctClass" target="AcctClass"/>
+                <Mapping source="DrawMethod" target="DrawMethod"/>
+                <Mapping source="BookAcctNo" target="BookAcctNo"/>
+                <Mapping source="ValueDate" target="ValueDate"/>
+                <Mapping source="DueDate" target="DueDate"/>
+                <Mapping source="Balance" target="Balance"/>
+                <Mapping source="VoucherType" target="VoucherType"/>
+                <Mapping source="CDAcctNo" target="CDAcctNo"/>
+            </Mappings>
+        </Node>
+    </MainProcess>
+    <InternalVars/>
+</TradeAssembly>

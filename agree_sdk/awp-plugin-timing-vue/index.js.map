@@ -1,0 +1,1 @@
+{"version":3,"sources":["awp-plugin-timing-vue/index.js"],"names":["GlobalTimer"],"mappings":";;;;;;;AACA;;;;;;QAGEA,W","file":"index.js","sourcesContent":["\r\nimport GlobalTimer from './lib/global-timer';\r\n\r\nexport {\r\n  GlobalTimer\r\n};\r\n"]}

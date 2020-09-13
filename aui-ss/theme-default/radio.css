@@ -1,0 +1,56 @@
+/*---------此文件不能更改------------*/
+.aui-radio__input {
+  font-family: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  line-height: 1;
+  position: relative;
+  vertical-align: middle;
+  top: -4px;
+}
+.aui-radio__inner {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  box-sizing: border-box;
+  border: var(--radio-border-inner-border);
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+}
+
+.aui-radio__original {
+  opacity: 0;
+  display: none;
+}
+
+.aui-radio__label {
+  font-size: 24px;
+  color: #896e6e;
+  line-height: 50px;
+  text-align: left;
+}
+
+.aui-radio__input.is-checked .aui-radio__inner {
+  background: var(--radio-isradio-icon) #ffebea no-repeat 1px 4px;
+}
+
+.aui-radio__input.is-disabled.is-checked .aui-radio__inner {
+  background: var(--radio-disradio-icon) #EEE no-repeat 1px 4px;
+}
+
+.aui-radio__input.is-disabled .aui-radio__inner {
+  background-color: #e7e7e7;
+  cursor: not-allowed;
+}
+.aui-radio-group {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+}
+.aui-radio__input.is-focus {
+  box-shadow: 0px 0px 1px 2px #50bfff;
+  border-radius: 4px;
+}

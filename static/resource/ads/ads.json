@@ -1,0 +1,69 @@
+{
+  "idle": {
+    "timeLimitted": [
+      {
+        "startDate": "20150101",
+        "endDate": "20501231",
+        "startTime": "00:00:00",
+        "endTime": "23:59:59",
+        "type": "image/jpeg",
+        "file": "static/resource/ads/2.png",
+        "isEnabled": "true"
+      },
+      {
+        "startDate": "20150101",
+        "endDate": "20501231",
+        "startTime": "00:00:00",
+        "endTime": "23:59:59",
+        "type": "image/jpeg",        
+        "file": "static/resource/ads/3.png",
+        "isEnabled": "true"
+      },
+      {
+        "startDate": "20150101",
+        "endDate": "20501231",
+        "startTime": "00:00:00",
+        "endTime": "23:59:59",
+        "type": "image/jpeg", 
+        "file": "static/resource/ads/4.png",
+        "isEnabled": "true"
+      }
+    ],
+    "default": [
+      {
+        "type": "image/jpeg", 
+        "file": "static/resource/ads/4.png",
+        "isEnabled": "true"
+      }
+    ]
+  },
+  "transaction": {
+    "timeLimitted": [
+      {
+        "startDate": "20150101",
+        "endDate": "20501231",
+        "startTime": "00:00:00",
+        "endTime": "23:59:59",
+        "type": "image/jpeg", 
+        "file": "static/resource/ads/4.png",
+        "isEnabled": "true"
+      },
+      {
+        "startDate": "20150101",
+        "endDate": "20501231",
+        "startTime": "00:00:00",
+        "endTime": "23:59:59",
+        "type": "image/jpeg", 
+        "file": "static/resource/ads/3.png",
+        "isEnabled": "true"
+      }
+    ],
+    "default": [
+      {
+        "type": "image/jpeg", 
+        "file": "static/resource/ads/2.png",
+        "isEnabled": "true"
+      }
+    ]
+  }
+}

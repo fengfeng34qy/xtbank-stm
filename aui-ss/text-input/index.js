@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var _TextInput=require("./TextInput"),_TextInput2=_interopRequireDefault(_TextInput);function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}var install=function(e,t){e.component(_TextInput2.default.name,_TextInput2.default)};exports.default={install:install};

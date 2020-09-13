@@ -1,0 +1,1 @@
+{"version":3,"sources":["awp-lib-audio-player/index.js"],"names":["AudioPlayer"],"mappings":";;;;;;;AACA;;;;;;QAGEA,W","file":"index.js","sourcesContent":["\r\nimport AudioPlayer from './lib/audio.js';\r\n\r\nexport {\r\n  AudioPlayer\r\n};\r\n"]}

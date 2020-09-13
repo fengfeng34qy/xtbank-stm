@@ -1,0 +1,11 @@
+{
+  "name": "aui-table",
+  "version": "1.0.0",
+  "updateDate": "20180116",
+  "updateDescription": "此组件正式发布。",
+  "Description": "表格组件",
+  "product": "Agree UI Components for SelfService ",
+  "company": "赞同科技股份有限公司",
+  "copyright": "Copyright © 赞同科技股份有限公司 2017",
+  "main": "./index.js"
+}

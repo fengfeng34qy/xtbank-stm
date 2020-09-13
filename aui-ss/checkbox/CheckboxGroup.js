@@ -1,0 +1,1 @@
+"";Object.defineProperty(exports,"__esModule",{value:!0});var _common=require("../common");exports.default={render:function anonymous(){with(this)return _c("div",{staticClass:"aui-checkbox-group"},[_t("default")],2)},name:"aui-checkbox-group",mixins:[_common.Emitter],props:{value:{},min:Number,max:Number}};

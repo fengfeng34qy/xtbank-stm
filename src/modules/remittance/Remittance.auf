@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AppearanceUIFlow caption="" idCount="45" start="3" xy_location="125,50">
+    <UI caption="输入转账汇款金额" id="14"
+        path="/selfservice/src/modules/remittance/InputRemittanceAmount.vue" showId="4">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="PayActName" target="PayActName"/>
+            <Mapping source="PayActNo" target="PayActNo"/>
+            <Mapping source="PayeeActName" target="PayeeActName"/>
+            <Mapping source="PayeeActNo" target="PayeeActNo"/>
+            <Mapping source="PayeeBankName" target="PayeeBankName"/>
+            <Mapping source="PayeeBankNo" target="PayeeBankNo"/>
+            <Mapping source="TransferPriority" target="TransferPriority"/>
+            <Mapping source="PS" target="PS"/>
+            <Mapping source="Amount" target="Amount"/>
+            <Mapping source="AvlBalance" target="AvlBalance"/>
+            <Mapping source="CustName" target="CustName"/>
+            <Mapping source="AcctName" target="AcctName"/>
+            <Mapping source="AcctNo" target="AcctNo"/>
+            <Mapping source="PayActPin" target="PayActPin"/>
+            <Mapping source="PayeeCertNo" target="PayeeCertNo"/>
+            <Mapping source="PayeeCertType" target="PayeeCertType"/>
+            <Mapping source="PayeeName" target="PayeeName"/>
+        </Mappings>
+        <Entry id="xy_location" value="810,150"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="确定" id="1" name="OK" next="15" targetTerminal="正常端口"/>
+        <Out caption="取消" id="2" name="Cancel"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </UI>
+    <UI caption="插入银行卡" id="4"
+        path="/selfservice/src/modules/shared/InsertBankCard.vue" showId="8">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="CardBoxNo" target="CardBoxNo"/>
+            <Mapping source="CardType" target="CardType"/>
+            <Mapping source="CardNo" target="CardNo"/>
+            <Mapping source="VoucherNo" target="VoucherNo"/>
+            <Mapping source="RetCardFlag" target="RetCardFlag"/>
+            <Mapping source="RetCardRsnCode" target="RetCardRsnCode"/>
+            <Mapping source="RetCardRsnDesc" target="RetCardRsnDesc"/>
+            <Mapping source="cardData" target="cardData"/>
+            <Mapping source="AcctNo" target="AcctNo"/>
+            <Mapping source="AcctType" target="AcctType"/>
+        </Mappings>
+        <Entry id="xy_location" value="60,240"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="确定" id="1" name="OK" next="5" targetTerminal="正常端口"/>
+        <Out caption="取消" id="2" name="Cancel"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </UI>
+    <UI caption="输入密码" id="7"
+        path="/selfservice/src/modules/shared/InputCardPin.vue" showId="2">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf"/>
+        <Entry id="xy_location" value="310,150"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="确定" id="1" name="OK" next="8" targetTerminal="正常端口"/>
+        <Out caption="取消" id="2" name="Cancel" next="42" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </UI>
+    <LFC caption="设置用户已验密" id="8"
+        path="/selfservice/src/modules/shared/SetPwdPassed.lfc" showId="9">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf"/>
+        <Entry id="xy_location" value="310,240"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="正常出口" id="1" name="OK" next="9" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </LFC>
+    <LFC caption="设置用户已插入银行卡" id="5"
+        path="/selfservice/src/modules/shared/SetCardInserted.lfc" showId="14">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf"/>
+        <Entry id="xy_location" value="60,330"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="正常出口" id="1" name="正常出口" next="7" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </LFC>
+    <LFC caption="是否插入银行卡" id="3"
+        path="/selfservice/src/modules/shared/IsInsertCreditcard.lfc" showId="1">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf"/>
+        <Entry id="xy_location" value="60,150"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="已插卡已验密" id="1" name="正常出口" next="9" targetTerminal="正常端口"/>
+        <Out caption="未插卡未验密" id="2" name="EqualFalse" next="4" targetTerminal="正常端口"/>
+        <Out caption="已插卡未验密" id="3" name="HalfPass" next="7" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </LFC>
+    <LFC caption="通过CustNo获取历史转账列表" id="39"
+        path="/selfservice/src/modules/remittance/GetPayeeList.lfc" showId="10">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="TransferHistoryDetail" target="TransferHistoryDetail"/>
+            <Mapping source="CustNo" target="CustNo"/>
+        </Mappings>
+        <Entry id="xy_location" value="560,240"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="成功" id="1" name="success" next="31" targetTerminal="正常端口"/>
+        <Out caption="失败" id="2" name="failed" next="31" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </LFC>
+    <UI caption="客户签字" id="22"
+        path="/selfservice/src/modules/shared/CustomerSign.vue" showId="18">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="SignPicBase64" target="SignPicBase64"/>
+        </Mappings>
+        <Entry id="xy_location" value="1310,330"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="确定" id="1" name="OK" next="25" targetTerminal="正常端口"/>
+        <Out caption="取消" id="2" name="Cancel" next="42" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </UI>
+    <UI caption="现场审核" id="25"
+        path="/selfservice/src/modules/shared/Authorization.vue" showId="22">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="SignPicBase64" target="SignPicBase64"/>
+            <Mapping source="CustPhoto" target="CustPhoto"/>
+        </Mappings>
+        <Entry id="xy_location" value="1310,420"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="确定" id="1" name="OK" next="24" targetTerminal="正常端口"/>
+        <Out caption="取消" id="2" name="Cancel" next="42" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </UI>
+    <LFC caption="通过acctNo查询客户CustName和CustNo" id="38"
+        path="/selfservice/src/modules/shared/GetHoldingNameNo.lfc" showId="24">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="CustNo" target="CustNo"/>
+            <Mapping source="CustName" target="CustName"/>
+        </Mappings>
+        <Entry id="xy_location" value="310,510"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="成功" id="1" name="success" next="11" targetTerminal="正常端口"/>
+        <Out caption="失败" id="2" name="failed" next="42" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </LFC>
+    <UI caption="选择收款方" id="31"
+        path="/selfservice/src/modules/remittance/SelectPayee.vue" showId="16">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="TransferHistoryDetail" target="TransferHistoryDetail"/>
+            <Mapping source="PayeeBankNo" target="PayeeBankNo"/>
+            <Mapping source="PayeeActNo" target="PayeeActNo"/>
+            <Mapping source="PayeeActName" target="PayeeActName"/>
+            <Mapping source="PayeeBankName" target="PayeeBankName"/>
+        </Mappings>
+        <Entry id="xy_location" value="560,330"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="选中账户" id="1" name="thisAccount" next="11" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </UI>
+    <LFC caption="根据卡状态判断是否可进行交易" id="9"
+        path="/selfservice/src/modules/shared/IsPassByCardStatus.lfc" showId="15">
+        <InArg caption="" name="TransactionType">"SSTS"</InArg>
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="PinBlock" target="PinBlock"/>
+            <Mapping source="AcctNo" target="CDAcctNo"/>
+            <Mapping source="AcctNo" target="BookAcctNo"/>
+        </Mappings>
+        <Entry id="xy_location" value="310,330"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="是" id="1" name="Yes" next="33" targetTerminal="正常端口"/>
+        <Out caption="否" id="2" name="No" next="42" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </LFC>
+    <LFC caption="通过acctNo查找AvlBalance" id="33"
+        path="/selfservice/src/modules/shared/GetHoldingDetail.lfc" showId="20">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="AcctNo" target="AcctNo"/>
+            <Mapping source="AcctName" target="AcctName"/>
+            <Mapping source="AvlBalance" target="AvlBalance"/>
+            <Mapping source="VoucherNo" target="VoucherNo"/>
+            <Mapping source="CertNo" target="CertNo"/>
+            <Mapping source="CertType" target="CertType"/>
+            <Mapping source="VoucherType" target="VoucherType"/>
+            <Mapping source="Currency" target="Currency"/>
+            <Mapping source="Balance" target="Balance"/>
+            <Mapping source="AcctStatus" target="AcctStatus"/>
+            <Mapping source="AcctClass" target="AcctClass"/>
+            <Mapping source="AcctType" target="AcctType"/>
+            <Mapping source="DepositType" target="DepositType"/>
+            <Mapping source="DrawMethod" target="DrawMethod"/>
+            <Mapping source="AcctNo" target="CDAcctNo"/>
+            <Mapping source="AcctNo" target="BookAcctNo"/>
+            <Mapping source="DepositTerm" target="DepositTerm"/>
+            <Mapping source="ValueDate" target="ValueDate"/>
+            <Mapping source="DueDate" target="DueDate"/>
+        </Mappings>
+        <Entry id="xy_location" value="310,420"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="成功" id="1" name="success" next="38" targetTerminal="正常端口"/>
+        <Out caption="失败" id="2" name="failed" next="42" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </LFC>
+    <LFC caption="金额是否大于5万是否需要读取身份证" id="15"
+        path="/selfservice/src/modules/shared/IsIDNeeded.lfc" showId="5">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="Amount" target="Amount"/>
+        </Mappings>
+        <Entry id="xy_location" value="1060,150"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="不需要身份证" id="1" name="noNeed" next="43" targetTerminal="正常端口"/>
+        <Out caption="需要验证身份证" id="2" name="need" next="17" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </LFC>
+    <LFC caption="设置身份已验证" id="20"
+        path="/selfservice/src/modules/shared/SetIDChecked.lfc" showId="28">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf"/>
+        <Entry id="xy_location" value="1060,600"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="正常出口" id="1" name="OK" next="21" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </LFC>
+    <LFC caption="柜员授权" id="24"
+        path="/selfservice/src/modules/shared/TellerAuth.lfc" showId="26">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="AuthTellerNo" target="AuthTellerNo"/>
+        </Mappings>
+        <Entry id="xy_location" value="1310,510"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="授权成功" id="1" name="success" next="26" targetTerminal="正常端口">
+            <Bendpoint location="1383,589"/>
+            <Bendpoint location="1553,589"/>
+            <Bendpoint location="1553,130"/>
+            <Bendpoint location="1710,130"/>
+        </Out>
+        <Out caption="授权失败" id="2" name="failed" next="25" targetTerminal="正常端口">
+            <Bendpoint location="1420,580"/>
+            <Bendpoint location="1526,580"/>
+            <Bendpoint location="1526,384"/>
+            <Bendpoint location="1400,384"/>
+        </Out>
+        <Exception name="" next="" targetTerminal=""/>
+    </LFC>
+    <UI caption="影像采集" id="21"
+        path="/selfservice/src/modules/shared/PhotoCatch.vue" showId="30">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="CustPhoto" target="CustPhoto"/>
+        </Mappings>
+        <Entry id="xy_location" value="1060,690"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="确定" id="1" name="OK" next="43" targetTerminal="正常端口"/>
+        <Out caption="取消" id="2" name="Cancel" next="42" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </UI>
+    <LFC caption="卡证是否一致" id="37"
+        path="/selfservice/src/modules/shared/IsCardIDSame.lfc" showId="17">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="AcctNo" target="BookAcctNo"/>
+            <Mapping source="AcctNo" target="CDAcctNo"/>
+        </Mappings>
+        <Entry id="xy_location" value="1060,330"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="一致" id="1" name="Yes" next="18" targetTerminal="正常端口"/>
+        <Out caption="不一致" id="2" name="No" next="18" targetTerminal="正常端口"/>
+        <Out caption="通讯异常" id="3" name="failed" next="18" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </LFC>
+    <LFC caption="联网核查" id="18"
+        path="/selfservice/src/modules/shared/NetworkCheck.lfc" showId="21">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf"/>
+        <Entry id="xy_location" value="1060,420"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="核查成功" id="1" name="Success" next="19" targetTerminal="正常端口"/>
+        <Out caption="核查失败" id="2" name="failed" next="1001" targetTerminal="OK">
+            <Bendpoint location="1154,485"/>
+            <Bendpoint location="1534,485"/>
+            <Bendpoint location="1534,660"/>
+            <Bendpoint location="1678,660"/>
+        </Out>
+        <Out caption="通讯失败" id="3" name="commFailed"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </LFC>
+    <LFC caption="黑名单检查" id="19"
+        path="/selfservice/src/modules/shared/BlacklistCheck.lfc" showId="25">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf"/>
+        <Entry id="xy_location" value="1060,510"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="通过" id="1" name="Yes" next="20" targetTerminal="正常端口"/>
+        <Out caption="不通过" id="2" name="No" next="42" targetTerminal="正常端口"/>
+        <Out caption="通讯失败" id="3" name="failed"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </LFC>
+    <UI caption="读取身份证" id="17"
+        path="/selfservice/src/modules/shared/ReadIDCard.vue" showId="11">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf"/>
+        <Entry id="xy_location" value="1060,240"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="确定" id="1" name="OK" next="37" targetTerminal="正常端口"/>
+        <Out caption="取消" id="2" name="Cancel"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </UI>
+    <UI caption="转账确认页面" id="43"
+        path="/selfservice/src/modules/remittance/RemittanceConfirm.vue" showId="6">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="PayActName" target="PayActName"/>
+            <Mapping source="PayActNo" target="PayActNo"/>
+            <Mapping source="PayeeActName" target="PayeeActName"/>
+            <Mapping source="PayeeActNo" target="PayeeActNo"/>
+            <Mapping source="PayeeBankNo" target="PayeeBankNo"/>
+            <Mapping source="TransferPriority" target="TransferPriority"/>
+            <Mapping source="Amount" target="Amount"/>
+            <Mapping source="AvlBalance" target="AvlBalance"/>
+            <Mapping source="PS" target="PS"/>
+            <Mapping source="PayeeBankName" target="PayeeBankName"/>
+        </Mappings>
+        <Entry id="xy_location" value="1310,150"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="确定" id="1" name="OK" next="45" targetTerminal="正常端口"/>
+        <Out caption="取消" id="2" name="Cancel" next="42" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </UI>
+    <UI caption="输入账户名称" id="11"
+        path="/selfservice/src/modules/remittance/InputPayeeAccount.vue" showId="3">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="CertNo" target="CertNo"/>
+            <Mapping source="CertType" target="CertType"/>
+            <Mapping source="CustName" target="CustName"/>
+            <Mapping source="CustNo" target="CustNo"/>
+            <Mapping source="CustPhoto" target="CustPhoto"/>
+            <Mapping source="CustType" target="CustType"/>
+            <Mapping source="SignPicBase64" target="SignPicBase64"/>
+            <Mapping source="CheckResult" target="CheckResult"/>
+            <Mapping source="IDCheckPhoto" target="IDCheckPhoto"/>
+            <Mapping source="IDName" target="IDName"/>
+            <Mapping source="IDNo" target="IDNo"/>
+            <Mapping source="IDType" target="IDType"/>
+            <Mapping source="Address" target="Address"/>
+            <Mapping source="City" target="City"/>
+            <Mapping source="PhoneNo" target="PhoneNo"/>
+            <Mapping source="Province" target="Province"/>
+            <Mapping source="TelNo" target="TelNo"/>
+            <Mapping source="AcctName" target="AcctName"/>
+            <Mapping source="AvlBalance" target="AvlBalance"/>
+            <Mapping source="PayeeActName" target="PayeeActName"/>
+            <Mapping source="PayeeActNo" target="PayeeActNo"/>
+            <Mapping source="PayeeBankNo" target="PayeeBankNo"/>
+            <Mapping source="PayeeBankName" target="PayeeBankName"/>
+        </Mappings>
+        <Entry id="xy_location" value="560,150"/>
+        <Entry id="xy_size" value="183,40"/>
+        <Out caption="信息齐全可以提交" id="1" name="commit" next="14" targetTerminal="正常端口"/>
+        <Out caption="在通讯录中选择" id="2" name="selectInMailList" next="39" targetTerminal="正常端口"/>
+        <Out caption="关闭出口" id="关闭出口" name="Close"/>
+        <Out caption="上一步" id="上一步" name="Back"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </UI>
+    <UI caption="打印凭条" id="29"
+        path="/selfservice/src/modules/shared/PrintSlip.vue" showId="27">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="PrintData" target="PrintData"/>
+        </Mappings>
+        <Entry id="xy_location" value="1620,510"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="确定" id="1" name="OK" next="30" targetTerminal="正常端口"/>
+        <Out caption="取消" id="2" name="Cancel" next="30" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </UI>
+    <EndStep id="1000">
+        <Entry id="xy_location" value="1620,690"/>
+        <Entry id="xy_size" value="180,40"/>
+        <In caption="正常出口" id="1" name="OK"/>
+    </EndStep>
+    <LFC caption="设置交易成功" id="41"
+        path="/selfservice/src/modules/shared/SetTradeSuccess.lfc" showId="12">
+        <InArg caption="" name="title"/>
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="TranResult" target="TranResult"/>
+        </Mappings>
+        <Entry id="xy_location" value="1620,240"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="正常出口" id="1" name="OK" next="28" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </LFC>
+    <LFC caption="设置交易失败" id="42"
+        path="/selfservice/src/modules/shared/SetTradeFailed.lfc" showId="19">
+        <InArg caption="" name="response"/>
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="TranResult" target="TranResult"/>
+        </Mappings>
+        <Entry id="xy_location" value="1620,330"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="正常出口" id="1" name="OK" next="28" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </LFC>
+    <LFC caption="提交转账请求" id="26"
+        path="/selfservice/src/modules/remittance/commitRemittance.lfc" showId="7">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="PayActName" target="PayActName"/>
+            <Mapping source="AcctNo" target="PayActNo"/>
+            <Mapping source="PayeeActName" target="PayeeActName"/>
+            <Mapping source="AcctNo" target="PayeeActNo"/>
+            <Mapping source="PayeeBankNo" target="PayeeBankNo"/>
+            <Mapping source="TransferPriority" target="TransferPriority"/>
+            <Mapping source="Amount" target="Amount"/>
+            <Mapping source="PinBlock" target="PinBlock"/>
+            <Mapping source="IDType" target="IDType"/>
+            <Mapping source="IDNo" target="IDNo"/>
+        </Mappings>
+        <Entry id="xy_location" value="1620,150"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="成功" id="1" name="success" next="41" targetTerminal="正常端口"/>
+        <Out caption="失败" id="2" name="failed" next="42" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </LFC>
+    <LFC caption="清除客户数据" id="30"
+        path="/selfservice/src/modules/shared/ClearCustomer.lfc" showId="29">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf"/>
+        <Entry id="xy_location" value="1620,600"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="正常出口" id="1" name="OK" next="1001" targetTerminal="OK"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </LFC>
+    <UI caption="转账汇款结果" id="28"
+        path="/selfservice/src/modules/shared/TradeResultPage.vue" showId="23">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="TranResult" target="TranResult"/>
+        </Mappings>
+        <Entry id="xy_location" value="1620,420"/>
+        <Entry id="xy_size" value="180,40"/>
+        <Out caption="确定" id="1" name="OK"/>
+        <Out caption="取消" id="2" name="Cancel"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </UI>
+    <LFC caption="金额是否大于5万是否需要读取身份证" id="45"
+        path="/selfservice/src/modules/shared/IsIDNeeded.lfc" showId="13">
+        <Mappings path="/selfservice/src/modules/remittance/Remittance.auf">
+            <Mapping source="Amount" target="Amount"/>
+        </Mappings>
+        <Entry id="xy_location" value="1300,247"/>
+        <Entry id="xy_size" value="200,40"/>
+        <Out caption="不需要身份证" id="1" name="noNeed" next="26" targetTerminal="正常端口">
+            <Bendpoint location="1383,319"/>
+            <Bendpoint location="1529,319"/>
+            <Bendpoint location="1529,122"/>
+            <Bendpoint location="1710,122"/>
+        </Out>
+        <Out caption="需要验证身份证" id="2" name="need" next="22" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </LFC>
+    <Lanes start="0">
+        <Lane contains="3,4,5" name="插入银行卡" width="300"/>
+        <Lane contains="33,38,7,8,9" name="输入密码" width="200"/>
+        <Lane contains="11,39,31" name="录入收款方" width="300"/>
+        <Lane contains="14" name="输入转账信息" width="200"/>
+        <Lane contains="15,37,17,18,19,20,21" name="验证身份信息" width="300"/>
+        <Lane contains="22,45,24,25,43" name="确认转账信息" width="200"/>
+        <Lane contains="26,28,29,1000,41,30,42" name="交易结果" width="300"/>
+    </Lanes>
+    <DataBasket>
+        <Ade name="CardBoxNo"/>
+        <Ade name="CardType"/>
+        <Ade name="VoucherNo"/>
+        <Ade name="RetCardRsnCode"/>
+        <Ade name="RetCardRsnDesc"/>
+        <Ade name="RetCardFlag"/>
+        <Ade name="CardNo"/>
+        <Ade name="CustPhoto"/>
+        <Ade name="SignPicBase64"/>
+        <Ade name="PhoneNo"/>
+        <Ade name="TranResult"/>
+        <Ade name="CustName"/>
+        <Ade name="CustNo"/>
+        <Ade name="PrintData"/>
+        <Ade name="AvlBalance"/>
+        <Ade name="AcctName"/>
+        <Ade name="AcctNo"/>
+        <Ade name="TransferHistoryDetail"/>
+        <Ade name="IDType"/>
+        <Ade name="IDNo"/>
+        <Ade name="PinBlock"/>
+        <Ade name="Amount"/>
+        <Ade name="PayActName"/>
+        <Ade name="PayActNo"/>
+        <Ade name="PayeeActName"/>
+        <Ade name="PayeeActNo"/>
+        <Ade name="PayeeBankNo"/>
+        <Ade name="PayeeBankName"/>
+        <Ade name="PS"/>
+        <Ade name="TransferPriority"/>
+        <Ade name="cardData"/>
+        <Ade name="PayeeCertNo"/>
+        <Ade name="PayeeName"/>
+        <Ade name="PayeeCertType"/>
+        <Ade name="PayActPin"/>
+        <Ade name="CustType"/>
+        <Ade name="Address"/>
+        <Ade name="CertType"/>
+        <Ade name="City"/>
+        <Ade name="Province"/>
+        <Ade name="IDName"/>
+        <Ade name="TelNo"/>
+        <Ade name="CheckResult"/>
+        <Ade name="CertNo"/>
+        <Ade name="IDCheckPhoto"/>
+        <Ade name="AcctType"/>
+        <Ade name="DepositTerm"/>
+        <Ade name="DepositType"/>
+        <Ade name="AcctStatus"/>
+        <Ade name="Currency"/>
+        <Ade name="AcctClass"/>
+        <Ade name="DrawMethod"/>
+        <Ade name="BookAcctNo"/>
+        <Ade name="ValueDate"/>
+        <Ade name="DueDate"/>
+        <Ade name="Balance"/>
+        <Ade name="VoucherType"/>
+        <Ade name="CDAcctNo"/>
+        <Ade name="AuthTellerNo"/>
+        <Dnc path="/selfservice/src/modules/shared/Authorization.vue.dnc"/>
+    </DataBasket>
+    <InternalVars/>
+    <FileDescription>作者:&#xd;
+功能:&#xd;
+备注:</FileDescription>
+    <End caption="正常出口" id="1001" name="OK"/>
+</AppearanceUIFlow>

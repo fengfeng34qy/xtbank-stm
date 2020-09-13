@@ -1,0 +1,1 @@
+"";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default={render:function anonymous(){with(this)return _c("div",{staticClass:"aui-tip"},[_c("span",{class:sizeClass},[_t("default")],2)])},name:"aui-tip",data:function(){return{}},props:{size:{type:String,default:"normal"}},computed:{sizeClass:function(){return"aui-tip-"+this.size}}};

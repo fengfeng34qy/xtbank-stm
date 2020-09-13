@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var _DatePicker=require("./DatePicker"),_DatePicker2=_interopRequireDefault(_DatePicker);function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}var install=function(e,t){e.component(_DatePicker2.default.name,_DatePicker2.default)};exports.default={install:install};

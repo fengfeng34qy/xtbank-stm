@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var _Progress=require("./Progress"),_Progress2=_interopRequireDefault(_Progress);function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}var install=function(e,r){e.component(_Progress2.default.name,_Progress2.default)};exports.default={install:install};

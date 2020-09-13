@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var _NumberInput=require("./NumberInput"),_NumberInput2=_interopRequireDefault(_NumberInput);function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}var install=function(e,u){e.component(_NumberInput2.default.name,_NumberInput2.default)};exports.default={install:install};

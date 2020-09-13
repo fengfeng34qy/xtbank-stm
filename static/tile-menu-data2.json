@@ -1,0 +1,42 @@
+[
+  {
+    "tradeName": "我要开卡",
+    "icon": "static/icon/1.png",
+    "isEnabled": true,
+    "size": "normal",
+    "navigationMode": "step",
+    "tad": "AutoCreateCard",
+    "tadPath": "/step-page-navigator/test1/child",
+    "code": "2001"
+  },
+  {
+    "tradeName": "现金取款",
+    "icon": "static/icon/2.png",
+    "isEnabled": true,
+    "size": "normal",
+    "navigationMode": "step",
+    "tad": "AutoCreateCard",
+    "tadPath": "/step-page-navigator/test2/test2",
+    "code": "2002"
+  },
+  {
+    "tradeName": "现金存款",
+    "icon": "static/icon/3.png",
+    "isEnabled": true,
+    "size": "normal",
+    "navigationMode": "step",
+    "tad": "AutoCreateCard",
+    "tadPath": "/step-page-navigator/test3/test3",
+    "code": "2003"
+  },
+  {
+    "tradeName": "软键盘",
+    "icon": "static/icon/4.png",
+    "isEnabled": true,
+    "size": "normal",
+    "navigationMode": "step",
+    "tad": "AutoCreateCard",
+    "tadPath": "/step-page-navigator/keyborad/keyborad",
+    "code": "2004"
+  }
+]

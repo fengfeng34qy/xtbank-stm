@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LogicFlowControl caption="通过CustNo获取历史转账列表" idCount="9" start="1" xy_location="256,48">
+    <Component caption="新建一个Object" id="1" name="ObjectCreate"
+        showId="1" version="1.0">
+        <OutArg caption="新建的Object" name="createObject"/>
+        <Entry id="xy_location" value="181,143"/>
+        <Entry id="xy_size" value="200,40"/>
+        <Out caption="成功" id="1" name="success" next="2" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </Component>
+    <Component caption="设置参数" id="2" name="SetParameter" showId="2" version="1.0">
+        <InArg caption="源对象" name="sourceObject">{
+"CustNo": dm().CustNo
+}</InArg>
+        <OutArg caption="目标对象" name="targetKey">varMap().request</OutArg>
+        <Entry id="xy_location" value="181,243"/>
+        <Entry id="xy_size" value="200,40"/>
+        <Out caption="成功" id="1" name="success" next="3" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </Component>
+    <Component caption="查询用户转账历史记录" id="3" name="CommBasic" showId="3" version="1.0">
+        <InArg caption="请求参数" name="request">varMap().request</InArg>
+        <InArg caption="通讯映射实体" name="commEntity">"b053"</InArg>
+        <InArg caption="等待提示" name="tip">"查询客户历史转账列表"</InArg>
+        <OutArg caption="返回参数" name="response">varMap().response</OutArg>
+        <Entry id="xy_location" value="175,330"/>
+        <Entry id="xy_size" value="200,40"/>
+        <Out caption="成功" id="1" name="success" next="4" targetTerminal="正常端口"/>
+        <Out caption="失败" id="2" name="failed" next="6" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </Component>
+    <Component caption="通讯是否成功" id="4" name="EqualityCompare" showId="4" version="1.0">
+        <InArg caption="第一个值" name="value1">varMap().response.SYS_HEAD.ReturnCode</InArg>
+        <InArg caption="第二个值" name="value2">"000000"</InArg>
+        <Entry id="xy_location" value="50,420"/>
+        <Entry id="xy_size" value="200,40"/>
+        <Out caption="相等" id="1" name="true" next="8" targetTerminal="正常端口"/>
+        <Out caption="不相等" id="2" name="false" next="6" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </Component>
+    <Component caption="&quot;查询客户历史列表&quot;" id="6"
+        name="DialogMessageAsync" showId="5" version="1.0">
+        <InArg caption="消息内容" name="message">"查询客户历史交易列表"</InArg>
+        <InArg caption="消息类型" name="msgType">"error"</InArg>
+        <InArg caption="按钮类型" name="buttonType">"ok"</InArg>
+        <OutArg caption="返回结果" name="result">varMap().dialog</OutArg>
+        <Entry id="xy_location" value="292,420"/>
+        <Entry id="xy_size" value="200,40"/>
+        <Out caption="成功" id="1" name="success" next="1002" targetTerminal="failed"/>
+        <Out caption="失败" id="2" name="failed" next="1002" targetTerminal="failed"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </Component>
+    <Component caption="获取RSP_BODY" id="8" name="SetParameter"
+        showId="6" version="1.0">
+        <InArg caption="源对象" name="sourceObject">varMap().response.RSP_BODY</InArg>
+        <OutArg caption="目标对象" name="targetKey">varMap().rspBody</OutArg>
+        <Entry id="xy_location" value="175,510"/>
+        <Entry id="xy_size" value="200,40"/>
+        <Out caption="成功" id="1" name="success" next="9" targetTerminal="正常端口"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </Component>
+    <Component caption="批量设置参数" id="9" name="SetParameters" showId="7" version="1.0">
+        <InArg caption="源对象数组" name="sourceArray">[
+varMap().rspBody.TransferHistoryDetail
+]</InArg>
+        <OutArg caption="目标对象数组" name="targetArray">[
+dm().TransferHistoryDetail
+]</OutArg>
+        <Entry id="xy_location" value="175,600"/>
+        <Entry id="xy_size" value="200,40"/>
+        <Out caption="成功" id="1" name="success" next="1001" targetTerminal="success"/>
+        <Exception name="" next="" targetTerminal=""/>
+    </Component>
+    <EndStep id="1000">
+        <Entry id="xy_location" value="175,690"/>
+        <Entry id="xy_size" value="200,40"/>
+        <In caption="成功" id="1" name="success"/>
+        <In caption="失败" id="2" name="failed"/>
+    </EndStep>
+    <DataBasket>
+        <Ade name="TransferHistoryDetail"/>
+        <Ade name="CustNo"/>
+    </DataBasket>
+    <InternalVars/>
+    <FileDescription>作者:&#xd;
+功能:&#xd;
+备注:</FileDescription>
+    <runOnServer>false</runOnServer>
+    <InArgs/>
+    <OutArgs/>
+    <AdeReference/>
+    <End caption="成功" id="1001" name="success"/>
+    <End caption="失败" id="1002" name="failed"/>
+</LogicFlowControl>

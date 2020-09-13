@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="140px" viewBox="0 0 140 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>借记卡</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="现金存入" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="选择读卡方式（1280x1024）" transform="translate(-430.000000, -393.000000)">
+            <g id="借记卡" transform="translate(430.000000, 393.000000)">
+                <path d="M70,140 C108.659932,140 140,108.659932 140,70 C140,31.3400675 108.659932,0 70,0 C31.3400675,0 0,31.3400675 0,70 C0,108.659932 31.3400675,140 70,140 Z" id="Oval-4" fill="#BBBBBB" opacity="0.6"></path>
+                <rect id="Rectangle-10" fill="#BBBBBB" x="29" y="39" width="82" height="62" rx="8"></rect>
+                <path d="M102.632688,101 L37.3673119,101 C32.746508,101 29,97.6153669 29,93.4391405 L29,64.7072742 L111,64.7072742 L111,93.4391405 C111,97.6153669 107.253492,101 102.632688,101 Z M80.8774482,81.3413927 L77.5305234,91.9268444 L97.6121865,91.9268444 L100.959111,81.3413927 L80.8774482,81.3413927 Z M29,46.560963 C29,42.385461 32.746508,39 37.3673119,39 L102.632688,39 C107.253492,39 111,42.385461 111,46.560963 L111,54.122133 L29,54.122133 L29,46.560963 L29,46.560963 Z" id="Page-1" fill="#BBBBBB"></path>
+            </g>
+        </g>
+    </g>
+</svg>

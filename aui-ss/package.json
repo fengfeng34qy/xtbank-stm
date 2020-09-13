@@ -1,0 +1,11 @@
+{
+  "name": "AUI-SS",
+  "version": "1.0.0",
+  "updateDate": "20170101",
+  "updateDescription":"此版本正式发布。",
+  "Description":"Agree AST 4.0 自助框架",
+  "product":"Agree AST 4.0 Self-Service Framework",
+  "company":"赞同科技股份有限公司",
+  "copyright":"Copyright © 赞同科技股份有限公司 2017",
+  "main": "./index.js"
+}

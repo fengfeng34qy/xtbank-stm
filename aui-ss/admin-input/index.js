@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var _AdminInput=require("./AdminInput"),_AdminInput2=_interopRequireDefault(_AdminInput);function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}var install=function(e,t){e.component(_AdminInput2.default.name,_AdminInput2.default)};exports.default={install:install};

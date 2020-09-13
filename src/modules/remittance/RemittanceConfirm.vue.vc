@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configration>
+    <DataBasket>
+        <Ade name="PayActName"/>
+        <Ade name="PayActNo"/>
+        <Ade name="PayeeActName"/>
+        <Ade name="PayeeActNo"/>
+        <Ade name="PayeeBankNo"/>
+        <Ade name="TransferPriority"/>
+        <Ade name="Amount"/>
+        <Ade name="AvlBalance"/>
+        <Ade name="PS"/>
+        <Ade name="PayeeBankName"/>
+    </DataBasket>
+    <InArgs/>
+    <OutArgs/>
+</Configration>

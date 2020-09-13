@@ -1,0 +1,17 @@
+﻿ /* aui的样式库若需要修改，可以通过aui-ss/theme-default/default-var.css拷贝需要更新的变量在:root中重新定义并赋值。
+ 例如
+-------color-------
+ --color-primary: #E74A41;
+ 可在:root中重新定义--color-primary:#FFFFFF
+ */
+
+ /*@import '../../aui-ss/theme-default/index.css';*/
+ :root {
+   --color-primary: #108EE9;
+   --input--width--large: 300px;
+   --input--width--normal: 180px;
+   --select-width: 240px;
+   --width-small: 120px;
+ }
+
+ ;

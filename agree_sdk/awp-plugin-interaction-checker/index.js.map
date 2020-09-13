@@ -1,0 +1,1 @@
+{"version":3,"sources":["awp-plugin-interaction-checker/index.js"],"names":["InteractionChecker"],"mappings":";;;;;;;AACA;;;;;;QAGEA,kB","file":"index.js","sourcesContent":["\r\nimport InteractionChecker from './lib/interaction-checker';\r\n\r\nexport {\r\n  InteractionChecker\r\n};\r\n"]}

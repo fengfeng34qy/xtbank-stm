@@ -1,0 +1,14 @@
+/*---------此文件不能更改------------*/
+.aui-tip span{
+  font-family: inherit;
+  padding-left: calc(var(--tip-padding) + 30px);
+  display: inline-block;
+  font-size: var(--tip-size);
+  line-height: 30px;
+  background: var(--tip-background);
+  color: var(--tip-color);
+}
+
+.aui-tip .aui-tip-large{
+  font-size: var(--tip-size--large);
+}
