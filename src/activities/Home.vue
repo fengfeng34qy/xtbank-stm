@@ -58,7 +58,7 @@ export default {
   },
   methods: {
     toMenu() {
-      this.$router.push({path: '/trade-menu'});
+      this.$router.push({ path: '/trade-menu', params: {name: 'sff'} });
     }
   }
 };
